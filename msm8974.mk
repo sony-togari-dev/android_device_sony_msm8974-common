@@ -132,6 +132,9 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SonyRIL
+    
+PRODUCT_PACKAGES += \
+    librmnetctl
 
 # Thermal management
 PRODUCT_PACKAGES += \
