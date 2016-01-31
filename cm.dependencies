@@ -12,6 +12,10 @@
     "target_path": "hardware/sony/thermanager"
   },
   {
+    "repository": "android_hardware_sony_macaddrsetup",
+    "target_path": "hardware/sony/macaddrsetup"
+  },
+  {
     "repository": "android_external_stlport",
     "target_path": "external/stlport"
   }
