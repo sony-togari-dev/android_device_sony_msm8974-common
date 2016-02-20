@@ -19,14 +19,25 @@
 
 /data/system/default_values            u:object_r:mpctl_data_file:s0
 
-/data/etc                              u:object_r:ta_data_file:s0
-/data/etc/wlan.*                       u:object_r:wifi_data_file:s0
+/data/etc                              u:object_r:bluetooth_data_file:s0
 /data/etc/bluetooth_bdaddr             u:object_r:bluetooth_data_file:s0
 
 /data/misc/quipc(/.*)?                 u:object_r:location_data_file:s0
 /data/misc/quipc/gsiff_socket          u:object_r:location_socket:s0
 /data/misc/gsiff_ctrl_q                u:object_r:location_data_file:s0
 
+# acdb delta files
+/data/audio/acdbdata/delta(/.*)?              u:object_r:system_data_file:s0
+
+/system/bin/macaddrsetup                      u:object_r:macaddrsetup_exec:s0
+/system/bin/thermanager                       u:object_r:thermanager_exec:s0
+/system/bin/timekeep                          u:object_r:timekeep_exec:s0
+
+/system/bin/irsc_util                  u:object_r:irsc_util_exec:s0
+/system/bin/netmgrd                    u:object_r:netmgrd_exec:s0
+/system/bin/qmuxd                      u:object_r:qmuxd_exec:s0
+/system/bin/rmt_storage                u:object_r:rmt_storage_exec:s0
+/system/bin/sensors.qcom               u:object_r:sensors_exec:s0
 /system/bin/sct_service                u:object_r:sct_exec:s0
 /system/bin/suntrold                   u:object_r:suntrold_exec:s0
 /system/bin/tad_static                 u:object_r:tad_exec:s0
