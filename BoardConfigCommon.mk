@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from Sony common
-include device/sony/common/BoardConfigCommon.mk
+BOARD_VENDOR := sony
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH += device/sony/msm8974-common/include
@@ -74,6 +73,8 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 
+
+BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/msm8974-common/boot/custombootimg.mk
 
 # Lights HAL
