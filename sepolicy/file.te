@@ -1,2 +1,4 @@
 type tad_socket, file_type;
 type ta_data_file, file_type;
+
+type sysfs_camera_torch, sysfs_type, file_type;

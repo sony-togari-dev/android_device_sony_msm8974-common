@@ -44,3 +44,8 @@
 /system/bin/taimport                   u:object_r:taimport_exec:s0
 /system/bin/ta_qmi_service             u:object_r:ta_qmi_exec:s0
 /system/bin/thermanager                u:object_r:thermanager_exec:s0
+
+/dev/block/platform/soc\.0/7824900\.sdhci/by-name/diag         u:object_r:diag_partition_device:s0
+/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/diag        u:object_r:diag_partition_device:s0
+/dev/block/bootdevice/by-name/diag                             u:object_r:diag_partition_device:s0
+/dev/block/mmcblk0p39                                          u:object_r:diag_partition_device:s0
