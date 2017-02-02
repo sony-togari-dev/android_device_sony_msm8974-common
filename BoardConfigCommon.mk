@@ -21,7 +21,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel properties
-TARGET_KERNEL_SOURCE := kernel/sony/msm8974
+ifeq (,$(filter $(TARGET_KERNEL_SOURCE),))
+  TARGET_KERNEL_SOURCE := kernel/sony/msm8974
+endif
 
 # use CAF variants
 BOARD_USES_QCOM_HARDWARE := true
