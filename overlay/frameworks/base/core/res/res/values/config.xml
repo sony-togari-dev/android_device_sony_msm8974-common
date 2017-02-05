@@ -195,4 +195,7 @@
     <!-- Permit doze mode to operate -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
+    <!-- Disable buttons backlight configurations -->
+    <integer name="config_buttonBrightnessSettingDefault">0</integer>
+
 </resources>
