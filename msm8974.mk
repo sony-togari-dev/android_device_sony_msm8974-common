@@ -66,7 +66,7 @@ PRODUCT_PACKAGES += \
 
 # IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq
+    sys.io.scheduler=row
 
 # Lights
 PRODUCT_PACKAGES += \
