@@ -1,7 +1,23 @@
 type suntrold, domain;
 type suntrold_exec, exec_type, file_type;
+type suntrold_sock_socket, file_type;
 
 # Started by init
 init_daemon_domain(suntrold)
 
+#suntrold self
+allow suntrold self:socket create_socket_perms;
+allow suntrold self:dir rw_file_perms;
 allow suntrold socket_device:dir write;
+
+#============= suntrold ==============
+allow suntrold ion_device:chr_file { ioctl open read };
+allow suntrold socket_device:dir add_name;
+allow suntrold socket_device:sock_file { create setattr };
+allow suntrold tad:unix_stream_socket connectto;
+allow suntrold tad_socket:sock_file write;
+allow suntrold tee_device:chr_file { ioctl open read write };
+allow suntrold suntrold_sock_socket:dir { add_name write };
+allow suntrold suntrold_sock_socket:sock_file { create setattr };
+
+

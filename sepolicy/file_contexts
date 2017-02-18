@@ -38,3 +38,6 @@
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/diag        u:object_r:diag_partition_device:s0
 /dev/block/bootdevice/by-name/diag                             u:object_r:diag_partition_device:s0
 /dev/block/mmcblk0p39                                          u:object_r:diag_partition_device:s0
+
+/dev/socket/suntory(/.*)?				u:object_r:suntrold_sock_socket:s0
+
