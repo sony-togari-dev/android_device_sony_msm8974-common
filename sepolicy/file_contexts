@@ -5,6 +5,10 @@
 /dev/socket/mpdecision(/.*)?           u:object_r:mpctl_socket:s0
 /dev/socket/mpctl                      u:object_r:mpctl_socket:s0
 
+# GPU
+/sys/devices/soc/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk                       u:object_r:sysfs_thermal:s0
+/sys/devices/soc/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk                   u:object_r:sysfs_thermal:s0
+
 ## Radio related
 /dev/rmnet_ctrl                        u:object_r:radio_device:s0
 # mux controller
