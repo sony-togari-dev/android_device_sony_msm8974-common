@@ -15,3 +15,9 @@ type_transition taimport ta_data_file:file wifi_data_file;
 type_transition taimport ta_data_file:file bluetooth_data_file "bluetooth_bdaddr";
 allow taimport wifi_data_file:file create_file_perms;
 allow taimport bluetooth_data_file:file create_file_perms;
+
+#============= taimport ==============
+allow taimport adbsecure_prop:property_service set;
+allow taimport init:unix_stream_socket connectto;
+allow taimport property_socket:sock_file write;
+
