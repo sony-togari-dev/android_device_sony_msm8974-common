@@ -17,3 +17,7 @@ wakelock_use(ta_qmi)
 
 # Access to /dev/smem_log
 allow ta_qmi smem_log_device:chr_file rw_file_perms;
+
+allow ta_qmi property_socket:sock_file write;
+allow ta_qmi init:unix_stream_socket connectto;
+
