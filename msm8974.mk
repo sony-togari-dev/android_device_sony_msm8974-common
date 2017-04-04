@@ -114,8 +114,7 @@ endif
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom \
-    power.msm8974
+    power.qcom
 
 # QC Perf
 PRODUCT_PROPERTY_OVERRIDES += \
