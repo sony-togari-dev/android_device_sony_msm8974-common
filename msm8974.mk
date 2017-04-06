@@ -44,8 +44,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libstlport
 
+# Specific apps
 PRODUCT_PACKAGES += \
-    Snap
+    Snap \
+    Gello
 
 # Display
 PRODUCT_PACKAGES += \
