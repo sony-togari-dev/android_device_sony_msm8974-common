@@ -18,7 +18,7 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(PRODUCT_OUT)/kernel \
 		$(uncompressed_ramdisk) \
 		$(INSTALLED_RAMDISK_TARGET) \
 		$(INITSONY) \
-		$(PRODUCT_OUT)/utilities/toybox \
+		$(TARGET_RECOVERY_ROOT_OUT)/sbin/toybox_static \
 		$(PRODUCT_OUT)/utilities/keycheck \
 		$(MKBOOTIMG) \
 		$(MINIGZIP) \
@@ -31,7 +31,7 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(PRODUCT_OUT)/kernel \
 	$(hide) mkdir -p $(PRODUCT_OUT)/combinedroot/sbin
 
 	$(hide) cp $(PRODUCT_OUT)/utilities/keycheck $(PRODUCT_OUT)/combinedroot/sbin/
-	$(hide) cp $(PRODUCT_OUT)/utilities/toybox $(PRODUCT_OUT)/combinedroot/sbin/toybox_init
+	$(hide) cp $(TARGET_RECOVERY_ROOT_OUT)/sbin/toybox_static $(PRODUCT_OUT)/combinedroot/sbin/toybox_init
 
 	$(hide) cp $(INITSONY) $(PRODUCT_OUT)/combinedroot/sbin/init_sony
 	$(hide) chmod 755 $(PRODUCT_OUT)/combinedroot/sbin/init_sony
