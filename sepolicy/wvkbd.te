@@ -1,3 +1,16 @@
 type wv,domain;
 type wv_exec, exec_type, file_type;
 init_daemon_domain(wv)
+
+#============= wv ==============
+allow wv ion_device:chr_file { ioctl open read };
+allow wv suntrold:unix_stream_socket connectto;
+allow wv suntrold_sock_socket:dir search;
+allow wv suntrold_sock_socket:sock_file write;
+allow wv tad:unix_stream_socket connectto;
+allow wv tad_socket:sock_file { getattr write };
+allow wv tad_socket:unix_stream_socket connectto;
+allow wv tee_device:chr_file { ioctl open read write };
+allow wv tee_device:unix_stream_socket connectto;
+allow wv tee_device:sock_file write;
+

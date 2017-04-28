@@ -1,2 +1,4 @@
 allow tee self:capability { setuid setgid };
 
+# Need to set some prop at init time
+allow tee tee_prop:property_service set;

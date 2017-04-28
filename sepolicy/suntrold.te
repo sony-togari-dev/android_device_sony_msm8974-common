@@ -10,7 +10,7 @@ allow suntrold ion_device:chr_file { ioctl open read };
 allow suntrold self:socket create_socket_perms;
 allow suntrold self:dir rw_file_perms;
 allow suntrold socket_device:dir { add_name write };
-allow suntrold socket_device:sock_file { create setattr };
+allow suntrold socket_device:sock_file { create getattr setattr };
 allow suntrold suntrold_sock_socket:dir { add_name search write };
 allow suntrold suntrold_sock_socket:sock_file { create setattr };
 allow suntrold tad:unix_stream_socket connectto;
