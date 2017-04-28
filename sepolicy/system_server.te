@@ -1,3 +1,13 @@
 allow system_server ta_data_file:dir search;
 allow system_server sysfs_usb_supply:dir search;
 allow system_server sysfs_usb_supply:file r_file_perms;
+allow system_server sysfs_touch:file rw_file_perms;
+allow system_server sysfs_vibrator:file rw_file_perms;
+allow system_server credmgr_exec:dir search;
+allow system_server credmgr_exec:file { getattr open read };
+allow system_server iddd_exec:dir search;
+allow system_server iddd_exec:file { getattr open read };
+
+r_dir_file(system_server, sysfs_addrsetup)
+
+allow system_server unlabeled:file unlink;

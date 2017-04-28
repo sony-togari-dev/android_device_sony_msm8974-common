@@ -1,0 +1,15 @@
+#scd deamon
+type scd, domain;
+type scd_exec, exec_type, file_type;
+type scd_data, file_type;
+init_daemon_domain(scd)
+
+#============= scd ==============
+allow scd scd_data:dir { add_name getattr search write };
+allow scd scd_data:file { create getattr open read write };
+allow scd socket_device:dir { add_name remove_name write };
+allow scd socket_device:sock_file { create getattr setattr unlink write };
+
+#TODO: relabel needed sysfs entries
+allow scd sysfs:file { getattr open read };
+

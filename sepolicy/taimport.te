@@ -18,6 +18,7 @@ allow taimport bluetooth_data_file:file create_file_perms;
 
 #============= taimport ==============
 allow taimport adbsecure_prop:property_service set;
-allow taimport init:unix_stream_socket connectto;
 allow taimport property_socket:sock_file write;
 
+# TODO: wrong labeled socket ? 
+allow taimport init:unix_stream_socket connectto;

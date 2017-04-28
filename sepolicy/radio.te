@@ -1,2 +1,3 @@
 # Talk to qmuxd (/dev/socket/qmux_radio)
 qmux_socket(radio)
+allow radio sysfs_touch:file rw_file_perms;
