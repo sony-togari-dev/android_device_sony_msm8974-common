@@ -40,7 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Specific apps
 PRODUCT_PACKAGES += \
     Snap \
-    Gello
+    Jelly
 
 # Display
 PRODUCT_PACKAGES += \
