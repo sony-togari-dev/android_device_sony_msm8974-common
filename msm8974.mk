@@ -110,6 +110,14 @@ endif
 # Power
 PRODUCT_PACKAGES += \
     power.msm8974
+  
+# librqbalance
+PRODUCT_PACKAGES += \
+    librqbalance    
+    
+# librqbalance enablement
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=/system/lib/librqbalance.so
 
 # Recovery
 PRODUCT_PACKAGES += \
