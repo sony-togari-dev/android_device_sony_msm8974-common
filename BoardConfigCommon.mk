@@ -91,9 +91,7 @@ BOARD_CUSTOM_BOOTIMG_MK := device/sony/msm8974-common/boot/custombootimg.mk
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Power HAL
-TARGET_POWERHAL_VARIANT := qcom
-CM_POWERHAL_EXTENSION := qcom
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/sony/msm8974-common/power/power_ext.c
+TARGET_POWERHAL_VARIANT := 
 
 # RIL
 TARGET_RIL_VARIANT := caf
