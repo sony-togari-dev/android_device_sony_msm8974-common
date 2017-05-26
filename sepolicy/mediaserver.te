@@ -1,5 +1,6 @@
 allow mediaserver camera_socket:dir { search write add_name };
 allow mediaserver camera_socket:file { read write getattr open };
+allow mediaserver camera_data_file:dir search;
 
 allow mediaserver mm-qcamerad:unix_stream_socket connectto;
 allow mediaserver system_server:unix_stream_socket { read write };
