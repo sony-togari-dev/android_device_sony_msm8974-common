@@ -14,6 +14,9 @@
 
 BOARD_VENDOR := sony
 
+# Use Snapdragon LLVM Compiler if available
+TARGET_USE_SDCLANG := true
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH += device/sony/msm8974-common/include
 
