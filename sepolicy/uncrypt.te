@@ -1,0 +1,2 @@
+# Write to /dev/kmsg
+allow uncrypt kmsg_device:chr_file rw_file_perms;
