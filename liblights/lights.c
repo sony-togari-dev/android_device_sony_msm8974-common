@@ -34,7 +34,7 @@
 
 #include <hardware/lights.h>
 
-#define LED_BACKLIGHT_PATH "/sys/class/leds/lcd-backlight/"
+#include "sony_lights.h"
 
 #define LED_RED_PATH "/sys/class/leds/led:rgb_red/"
 #define LED_GREEN_PATH "/sys/class/leds/led:rgb_green/"
