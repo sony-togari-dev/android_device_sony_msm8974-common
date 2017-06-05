@@ -14,6 +14,9 @@
 
 COMMON_PATH := device/sony/msm8974-common
 
+# Include msm8974-common system properties
+-include $(LOCAL_PATH)/systemprop.mk
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
@@ -34,9 +37,6 @@ PRODUCT_PACKAGES += \
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1
 
 # Specific apps
 PRODUCT_PACKAGES += \
@@ -102,14 +102,10 @@ endif
 # Power
 PRODUCT_PACKAGES += \
     power.msm8974
-  
+
 # librqbalance
 PRODUCT_PACKAGES += \
-    librqbalance    
-    
-# librqbalance enablement
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/system/lib/librqbalance.so
+    librqbalance
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -123,29 +119,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     thermanager
 
-# Camera config for HAL1 hacks		
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-     media.stagefright.legacyencoder=true \
-     media.stagefright.less-secure=true
-
-# USB OTG
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.isUsbOtgEnabled=true
-
 # Wifi
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0 \
-
 PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
-
-# QCOM Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.hwc.mdpcomp.enable=true
-
-# OpenGL ES 3.0
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196608

@@ -96,8 +96,6 @@ TARGET_RIL_VARIANT := caf
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
-TARGET_SYSTEM_PROP += device/sony/msm8974-common/system.prop
-
 BOARD_SEPOLICY_DIRS += \
     device/sony/msm8974-common/sepolicy
 
