@@ -90,9 +90,6 @@ BOARD_CUSTOM_BOOTIMG_MK := device/sony/msm8974-common/boot/custombootimg.mk
 # Lights HAL
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Power HAL
-TARGET_POWERHAL_VARIANT := 
-
 # RIL
 TARGET_RIL_VARIANT := caf
 
