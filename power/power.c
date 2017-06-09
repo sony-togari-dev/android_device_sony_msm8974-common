@@ -340,9 +340,11 @@ static int manage_powerserver(bool start)
 
     psthread_run = true;
 
-    /* Create folder, if doesn't exist */
+    /* Create folder if doesn't exist or fix perm */
     if (stat(POWERSERVER_DIR, &st) == -1) {
         mkdir(POWERSERVER_DIR, 0773);
+    } else {
+        chmod(POWERSERVER_DIR, 0773);
     }
 
     /* Get socket in the UNIX domain */
