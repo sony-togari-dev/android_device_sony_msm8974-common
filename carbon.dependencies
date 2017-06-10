@@ -2,7 +2,7 @@
   {
     "remote": "lineage",
     "repository": "LineageOS/android_device_sony_common",
-    "target_path": "device/sony/common",
+    "target_path": "device/sony/common-caf",
     "revision": "cm-14.1"
   },
   {
