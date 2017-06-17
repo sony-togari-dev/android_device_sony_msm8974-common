@@ -2,10 +2,6 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.data.large_tcp_window_size=true
 
-# Qualcomm Connectivity Engine (CNE) module
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.cne.feature=1
-
 # Time-service
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
@@ -65,8 +61,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.gps.qc_nlp_in_use=1 \
-    persist.loc.nlp_name=com.qualcomm.location \
+    persist.gps.qc_nlp_in_use=0 \
     ro.gps.agps_provider=1
 
 # Touchscreen
