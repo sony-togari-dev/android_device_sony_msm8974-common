@@ -15,7 +15,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.oem_socket=true \
     persist.radio.data_no_toggle=1 \
     persist.radio.calls.on.ims=0
-
-# Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.call_ring.multiple=0

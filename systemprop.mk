@@ -30,7 +30,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Google WiFi-Display
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
     tunnel.audio.encode = false
 
 # Snapdragon audio processing
@@ -83,10 +82,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # librqbalance enablement
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/librqbalance.so
-
-# WiFi
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
