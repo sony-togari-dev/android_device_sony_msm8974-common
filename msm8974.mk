@@ -103,10 +103,6 @@ endif
 PRODUCT_PACKAGES += \
     power.msm8974
 
-# librqbalance
-PRODUCT_PACKAGES += \
-    librqbalance
-
 # Recovery
 PRODUCT_PACKAGES += \
     keycheck
