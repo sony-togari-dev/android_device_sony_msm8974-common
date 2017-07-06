@@ -84,9 +84,6 @@
     players. -->
     <integer name="config_safe_media_volume_index">8</integer>
 
-    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">true</bool>
-
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
