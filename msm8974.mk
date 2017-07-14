@@ -68,10 +68,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 PRODUCT_PACKAGES += \
+    gps.msm8974 \
     libloc_core \
     libloc_eng \
     libgps.utils \
-    gps.msm8974 \
+    libloc_ds_api \
     libloc_api_v02
 
 # Ion
