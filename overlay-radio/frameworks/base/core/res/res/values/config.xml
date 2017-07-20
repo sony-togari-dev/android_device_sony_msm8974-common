@@ -59,6 +59,12 @@
         <item>"0,1"</item>
         <item>"7,1"</item>
     </string-array>
+    
+    <!-- The RadioAccessFamilies supported by the device.
+		 Empty is viewed as "all".  Only used on devices which
+		 don't support RIL_REQUEST_GET_RADIO_CAPABILITY
+		 format is UMTS|LTE|... -->
+    <string name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|LTE|HSPAP|GSM|TD_SCDMA|WCDMA|LTE_CA</string>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
