@@ -8,6 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # LTE, GSM/WCDMA
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9 \
+    ro.ril.telephony.mqanelements=5 \
     telephony.lteOnCdmaDevice=0 \
     telephony.lteOnGsmDevice=1 \
     persist.radio.apm_sim_not_pwdn=1 \
