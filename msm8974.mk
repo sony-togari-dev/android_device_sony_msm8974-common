@@ -121,6 +121,3 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
-
-# Include non-opensource parts
-$(call inherit-product, vendor/sony/msm8974-common/msm8974-common-vendor.mk)
