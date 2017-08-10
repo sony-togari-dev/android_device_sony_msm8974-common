@@ -17,7 +17,6 @@ allow taimport wifi_data_file:file create_file_perms;
 allow taimport bluetooth_data_file:file create_file_perms;
 
 #============= taimport ==============
-allow taimport adbsecure_prop:property_service set;
 allow taimport property_socket:sock_file write;
 allow taimport ta_prop:property_service set;
 # Allow reading system properties

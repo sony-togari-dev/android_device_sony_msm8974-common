@@ -133,9 +133,7 @@
          correctly use them when installed on your device.  Otherwise, keep this disabled
          so that applications can still use their own mechanisms. -->
     <bool name="config_enableAutoPowerModes">true</bool>
-    
-<<<<<<< HEAD
-=======
+
     <!-- Lockscreen rotation is default disabled into fmwk -->
     <bool name="config_enableLockScreenRotation">true</bool>
 
@@ -159,5 +157,4 @@
     <!-- The number of degrees to rotate the display when the device is in a car dock.
          A value of -1 means no change in orientation by default. -->
     <integer name="config_carDockRotation">-1</integer>
->>>>>>> 86a5ff2... msm8974: overlay: remove unsupported overlays
 </resources>
