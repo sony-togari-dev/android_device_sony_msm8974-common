@@ -126,3 +126,6 @@
 
 # Timekeep
 /sys/devices/qpnp-rtc-17/rtc/rtc0/since_epoch                                     u:object_r:sysfs_timekeep:s0
+
+# rmt_storage
+/sys/devices/fd80000\.rmtfs_sharedmem/uio(/.*)?                                   u:object_r:sysfs_uio:s0
