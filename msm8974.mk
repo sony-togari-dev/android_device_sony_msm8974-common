@@ -103,6 +103,13 @@ endif
 PRODUCT_PACKAGES += \
     power.msm8974
 
+
+# Camera (stock blobs)
+PRODUCT_PACKAGES += \
+	libshims_signal \
+	libshims_idd \
+    libsonycamera
+
 # Recovery
 PRODUCT_PACKAGES += \
     keycheck
