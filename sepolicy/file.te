@@ -4,3 +4,10 @@ type ta_data_file, file_type;
 type sysfs_camera_torch, sysfs_type, file_type;
 type sysfs_touch, fs_type, sysfs_type;
 
+# Macaddr
+type sysfs_addrsetup, fs_type, sysfs_type;
+
+# idd
+type iddd_file, file_type, data_file_type;
+
+
