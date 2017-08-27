@@ -94,7 +94,17 @@
 #define AID_NVRAM         1050  /* Access-controlled NVRAM */
 #define AID_DNS           1051  /* DNS resolution daemon (system: netd) */
 #define AID_DNS_TETHER    1052  /* DNS resolution daemon (tether: dnsmasq) */
+#define AID_WEBVIEW_ZYGOTE 1053  /* WebView zygote process */		
+#define AID_VEHICLE_NETWORK 1054 /* Vehicle network service */		
+#define AID_MEDIA_AUDIO 1055     /* GID for audio files on internal media storage */		
+#define AID_MEDIA_VIDEO 1056     /* GID for video files on internal media storage */		
+#define AID_MEDIA_IMAGE 1057     /* GID for image files on internal media storage */		
+#define AID_TOMBSTONED 1058      /* tombstoned user */		
+#define AID_MEDIA_OBB 1059       /* GID for OBB files on internal media storage */		
+#define AID_ESE 1060             /* embedded secure element (eSE) subsystem */		
+#define AID_OTA_UPDATE 1061      /* resource tracking UID for OTA updates */
 /* Changes to this file must be made in AOSP, *not* in internal branches. */
+
 
 #define AID_SHELL         2000  /* adb and debug shell user */
 #define AID_CACHE         2001  /* cache access */
@@ -143,15 +153,27 @@
 #define AID_MISC          9998  /* access to misc storage */
 #define AID_NOBODY        9999
 
-#define AID_APP          10000  /* first app user */
+#define AID_APP 10000       /* TODO: switch users over to AID_APP_START */
+#define AID_APP_START 10000 /* first app user */
+#define AID_APP_END 19999   /* last app user */
 
-#define AID_ISOLATED_START 99000 /* start of uids for fully isolated sandboxed processes */
-#define AID_ISOLATED_END   99999 /* end of uids for fully isolated sandboxed processes */
+#define AID_CACHE_GID_START 20000 /* start of gids for apps to mark cached data */
+#define AID_CACHE_GID_END 29999   /* end of gids for apps to mark cached data */
 
-#define AID_USER        100000  /* offset for uid ranges for each user */
+#define AID_EXT_GID_START 30000 /* start of gids for apps to mark external data */
+#define AID_EXT_GID_END 39999   /* end of gids for apps to mark external data */
+
+#define AID_EXT_CACHE_GID_START 40000 /* start of gids for apps to mark external cached data */
+#define AID_EXT_CACHE_GID_END 49999   /* end of gids for apps to mark external cached data */
 
 #define AID_SHARED_GID_START 50000 /* start of gids for apps in each user to share */
-#define AID_SHARED_GID_END   59999 /* start of gids for apps in each user to share */
+#define AID_SHARED_GID_END 59999   /* end of gids for apps in each user to share */
+
+#define AID_ISOLATED_START 99000 /* start of uids for fully isolated sandboxed processes */
+#define AID_ISOLATED_END 99999   /* end of uids for fully isolated sandboxed processes */
+
+#define AID_USER 100000        /* TODO: switch users over to AID_USER_OFFSET */
+#define AID_USER_OFFSET 100000 /* offset for uid ranges for each user */
 
 #if !defined(EXCLUDE_FS_CONFIG_STRUCTURES)
 /*
