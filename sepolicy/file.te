@@ -1,3 +1,4 @@
+# /dev/socket
 type tad_socket, file_type;
 type ta_data_file, file_type;
 
