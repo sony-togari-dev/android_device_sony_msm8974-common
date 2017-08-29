@@ -1,6 +1,13 @@
 type wlan_device, dev_type;
 type rfkill_device, dev_type;
 type diag_partition_device, dev_type;
-type trim_area_partition_device, dev_type;
 type tad_block_device, dev_type;
 
+# /dev/block partitions
+type ltalabel_block_device, dev_type;
+type modem_block_device, dev_type;
+type trim_area_partition_device, dev_type;
+
+# /dev devices
+type qmuxd_socket, dev_type;
+type smd_device, dev_type;
