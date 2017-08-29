@@ -1,4 +1,4 @@
-type updatemiscta, domain, domain_deprecated;
+type updatemiscta, domain;
 type updatemiscta_exec, exec_type, file_type;
 
 # Started by init
