@@ -12,6 +12,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
 	android.hardware.power@1.0-impl
+
+# Rendering	
+PRODUCT_PACKAGES += \
+	android.hardware.renderscript@1.0-impl 
 	
 # Lights
 PRODUCT_PACKAGES += \
