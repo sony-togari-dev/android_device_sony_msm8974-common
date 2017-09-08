@@ -16,6 +16,10 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
  	android.hardware.light@2.0-impl
+
+# Vibrator
+PRODUCT_PACKAGES += \
+	android.hardware.vibrator@1.0-impl 
  
 # WiFi
 PRODUCT_PACKAGES += \
