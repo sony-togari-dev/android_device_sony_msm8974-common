@@ -17,6 +17,9 @@ COMMON_PATH := device/sony/msm8974-common
 # Include msm8974-common system properties
 -include $(LOCAL_PATH)/systemprop.mk
 
+# inherit hidl hals
+$(call inherit-product, device/sony/msm8974-common/hidl.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
