@@ -9,6 +9,10 @@ PRODUCT_PACKAGES += \
  	android.hardware.graphics.mapper@2.0-impl \
  	android.hardware.graphics.composer@2.1-impl
 	
+# Power
+PRODUCT_PACKAGES += \
+	android.hardware.power@1.0-impl
+	
 # Lights
 PRODUCT_PACKAGES += \
  	android.hardware.light@2.0-impl
