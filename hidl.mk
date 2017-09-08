@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
  	android.hardware.light@2.0-impl   
  	
+# Memtrack
+PRODUCT_PACKAGES += \
+	android.hardware.memtrack@1.0-impl
+ 	
 # NFC
 PRODUCT_PACKAGES += \
 	android.hardware.nfc@1.0-impl
