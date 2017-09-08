@@ -13,6 +13,10 @@ PRODUCT_PACKAGES += \
  	android.hardware.graphics.mapper@2.0-impl \
  	android.hardware.graphics.composer@2.1-impl
  	
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+ 	
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl
