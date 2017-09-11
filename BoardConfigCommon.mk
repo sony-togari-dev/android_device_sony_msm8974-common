@@ -77,6 +77,7 @@ USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+TARGET_USES_GRALLOC1_ADAPTER := true
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
