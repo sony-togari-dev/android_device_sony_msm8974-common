@@ -14,7 +14,7 @@ allow addrsetup self:capability dac_override;
 
 allow addrsetup sysfs_addrsetup:file rw_file_perms;
 
-allow addrsetup urandom_device:file read;
+allow addrsetup random_device:file read;
 allow addrsetup tad_socket:sock_file { write };
 
 

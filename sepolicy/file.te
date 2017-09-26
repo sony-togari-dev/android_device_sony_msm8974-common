@@ -10,5 +10,3 @@ type sysfs_addrsetup, fs_type, sysfs_type;
 
 # idd
 type iddd_file, file_type, data_file_type;
-
-
