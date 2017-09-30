@@ -7,7 +7,6 @@ type credmgrd_prop, property_type;
 init_daemon_domain(credmgrd);
 
 #credmgrd self
-allow credmgrd self:socket create_socket_perms;
 allow credmgrd self:file rw_file_perms;
 allow credmgrd self:dir rw_file_perms;
 allow credmgrd self:fifo_file rw_file_perms;
@@ -17,7 +16,7 @@ allow credmgrd credmgrd_data_file:file { create getattr lock open read setattr u
 
 #credmgdr tad
 allow credmgrd tad:unix_stream_socket connectto;
-allow credmgrd tad_block_device:blk_file { read write ioctl open };
+allow credmgrd tad_block_device:blk_file { read write open };
 allow credmgrd tad_socket:unix_dgram_socket sendto;
 allow credmgrd tad_socket:unix_stream_socket connectto;
 allow credmgrd tad_socket:sock_file write;
@@ -56,7 +55,7 @@ allow credmgrd tmpfs:dir search;
 allow credmgrd tmpfs:lnk_file read;
 
 #credmgrd ion
-allow credmgrd ion_device:chr_file { ioctl open read };
+allow credmgrd ion_device:chr_file { open read };
 
 #============= credmgr init script ==============
 allow credmgrd cache_file:dir { add_name search };

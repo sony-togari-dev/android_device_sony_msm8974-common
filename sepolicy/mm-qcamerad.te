@@ -3,7 +3,7 @@ allow mm-qcamerad system_data_file:sock_file unlink;
 allow mm-qcamerad camera_data_file:sock_file rw_file_perms;
 allow mm-qcamerad camera_data_file:unix_dgram_socket sendto;
 allow mm-qcamerad camera_data_file:unix_stream_socket connectto;
-allow mm-qcamerad camera_device:chr_file { ioctl open read write };
+allow mm-qcamerad camera_device:chr_file { open read write };
 
 allow mm-qcamerad ta_data_file:dir { getattr open read search };
 

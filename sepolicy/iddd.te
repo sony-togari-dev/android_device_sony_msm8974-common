@@ -7,7 +7,6 @@ init_daemon_domain(iddd)
 
 type_transition iddd system_data_file:file iddd_file;
 
-allow iddd self:socket create_socket_perms;
 allow iddd iddd_file:sock_file { create setattr unlink write };
 
 allow iddd iddd_file:fifo_file rw_file_perms;

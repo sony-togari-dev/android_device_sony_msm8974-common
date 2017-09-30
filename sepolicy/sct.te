@@ -4,7 +4,6 @@ type sct_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(sct)
 
-allow sct self:socket create_socket_perms;
 allow sct self:capability { net_raw net_bind_service };
 
 # Access to /dev/smem_log

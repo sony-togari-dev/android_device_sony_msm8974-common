@@ -4,7 +4,7 @@ qmux_socket(rild)
 allow rild self:process execmem;
 allow rild servicemanager:binder call;
 allow rild tad_socket:sock_file write;
-allow rild tee_device:chr_file { read write open ioctl};
+allow rild tee_device:chr_file { read write open };
 allow rild tad:unix_stream_socket connectto;
 allow radio system_app_data_file:dir getattr;
 
