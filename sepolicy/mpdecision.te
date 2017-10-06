@@ -4,3 +4,14 @@ allow mpdecision socket_device:dir w_dir_perms;
 # For /data/system/default_values
 allow mpdecision system_data_file:dir rw_dir_perms;
 type_transition mpdecision system_data_file:file mpctl_data_file;
+
+#============= mpdecision ==============
+allow mpdecision cgroup:file read;
+allow mpdecision freq_prop:file { getattr open read };
+allow mpdecision proc:file { open read };
+allow mpdecision sysfs:dir { open read };
+allow mpdecision sysfs:file { getattr read };
+allow mpdecision sysfs_memory:dir search;
+allow mpdecision sysfs_memory:file { open read write };
+allow mpdecision system_data_file:sock_file { create unlink write };
+
