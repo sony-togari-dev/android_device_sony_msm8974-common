@@ -45,6 +45,26 @@
 /system/bin/ta_qmi_service             u:object_r:ta_qmi_exec:s0
 /system/bin/thermanager                u:object_r:thermanager_exec:s0
 
+###################################
+# System files
+#
+/system/bin/credmgrd                   u:object_r:credmgrd_exec:s0
+/system/bin/iddd                       u:object_r:iddd_exec:s0
+/system/bin/wvkbd                      u:object_r:wv_exec:s0
+/system/bin/macaddrsetup               u:object_r:addrsetup_exec:s0
+/system/bin/irsc_util                  u:object_r:irsc_util_exec:s0
+/system/bin/mm-qcamera-daemon          u:object_r:mm-qcamerad_exec:s0
+/system/bin/msm_irqbalance             u:object_r:msm_irqbalanced_exec:s0
+/system/bin/netmgrd                    u:object_r:netmgrd_exec:s0
+/system/bin/qmuxd                      u:object_r:qmuxd_exec:s0
+/system/bin/qseecomd                   u:object_r:tee_exec:s0
+/system/bin/qseeproxydaemon            u:object_r:tee_exec:s0
+/system/bin/rmt_storage                u:object_r:rmt_storage_exec:s0
+/system/bin/sensors.qcom               u:object_r:sensors_exec:s0
+/system/sbin/tad_static                u:object_r:tad_exec:s0
+/system/bin/mpdecision                 u:object_r:mpdecision_exec:s0
+/system/bin/time_daemon                u:object_r:time_daemon_exec:s0
+
 # /sbin
 /sbin/tad_static                       u:object_r:tad_exec:s0
 
