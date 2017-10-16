@@ -16,6 +16,19 @@
 /dev/block/platform/msm_sdcc\.1/by-name/Userdata                                  u:object_r:userdata_block_device:s0
 /dev/block/platform/msm_sdcc\.1/by-name/apps_log                                  u:object_r:misc_block_device:s0
 
+###################################
+# idd/rca files
+#
+/idd(/.*)?                                                          u:object_r:iddd_file:s0
+/idd/socket(/.*)?                                                   u:object_r:iddd_socket:s0
+/idd/output(/.*)?                                                   u:object_r:iddd_file:s0
+/idd/startup-prober(/.*)?                                           u:object_r:iddd_file:s0
+
+/system/etc/iddd.conf                                               u:object_r:iddd_data_file:s0
+/system/vendor/bin/iddd                                             u:object_r:iddd_exec:s0
+/system/vendor/bin/idd-logreader                                    u:object_r:iddd_exec:s0
+
+
 ## Radio related
 /dev/rmnet_ctrl                        u:object_r:radio_device:s0
 # mux controller

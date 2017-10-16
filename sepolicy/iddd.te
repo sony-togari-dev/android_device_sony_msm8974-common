@@ -3,16 +3,20 @@ type iddd, domain;
 
 type iddd_exec, exec_type, file_type;
 type iddd_file, file_type;
+type iddd_socket, file_type;
+type iddd_data_file, file_type, data_file_type;
 init_daemon_domain(iddd)
+
+unix_socket_connect(iddd, tad, tad)
 
 type_transition iddd system_data_file:file iddd_file;
 
 # whitelist ioctl commands
-allow iddd self:socket create_socket_perms;
-allowxperm iddd self:socket ioctl msm_sock_ipc_ioctls;
+allow iddd iddd_socket:socket create_socket_perms;
+allowxperm iddd iddd_socket:socket ioctl msm_sock_ipc_ioctls;
 
-allow iddd iddd_file:socket create_socket_perms;
-allowxperm iddd iddd_file:socket ioctl msm_sock_ipc_ioctls;
+allow iddd iddd_socket:socket create_socket_perms;
+allowxperm iddd iddd_socket:socket ioctl msm_sock_ipc_ioctls;
 
 allow iddd iddd_file:fifo_file rw_file_perms;
 allow iddd iddd_file:file rw_file_perms;
