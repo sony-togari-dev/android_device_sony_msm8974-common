@@ -4,5 +4,10 @@ type updatemiscta_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(updatemiscta)
 
+allow taimport self:capability dac_override;
+allow taimport sysfs:file { getattr open read };
+
 unix_socket_connect(taimport, tad, tad)
 allow taimport tad_socket:sock_file { write };
+
+allow taimport proc_overcommit_memory:file r_file_perms;

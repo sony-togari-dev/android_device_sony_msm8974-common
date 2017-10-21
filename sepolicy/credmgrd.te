@@ -68,6 +68,8 @@ allow credmgrd shell_exec:file { getattr read };
 allow credmgrd system_file:file execute_no_trans;
 allow credmgrd system_prop:property_service set;
 allow credmgrd system_data_file:dir { add_name create relabelfrom remove_name setattr write };
+allow toolbox credmgrd_prop:property_service set;
+allow toolbox sensors_prop:property_service set;
 
 #TODO: wrong labeled on dest socket?
 allow credmgrd init:unix_stream_socket connectto;

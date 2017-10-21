@@ -5,10 +5,14 @@ type ta_qmi_exec, exec_type, file_type;
 init_daemon_domain(ta_qmi)
 
 # TODO: What exactly is this needed for? - Need to investigate
-allow ta_qmi self:capability { dac_override net_raw net_bind_service };
+auditallow  ta_qmi self:capability { dac_override net_raw net_bind_service };
 
 # Connect to /dev/socket/tad
 unix_socket_connect(ta_qmi, tad, tad)
+
+# Auto socket
+allow ta_qmi self:socket create_socket_perms;
+allowxperm ta_qmi self:socket ioctl msm_sock_ipc_ioctls;
 
 # Wakelocks!
 wakelock_use(ta_qmi)

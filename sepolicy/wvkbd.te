@@ -13,3 +13,8 @@ allow wv tee_device:chr_file { open read write };
 allow wv tee_device:unix_stream_socket connectto;
 allow wv tee_device:sock_file write;
 
+#============= wv ==============
+allow wv firmware_file:dir search;
+allow wv firmware_file:file { getattr open read };
+allow wv proc:file { open read };
+allow wv sysfs:file { getattr open read };
