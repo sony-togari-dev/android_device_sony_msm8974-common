@@ -16,3 +16,7 @@ allow suntrold tad:unix_stream_socket connectto;
 allow suntrold tad_socket:sock_file write;
 allow suntrold tee_device:chr_file { open read write };
 
+# whitelist ioctl commands
+allow suntrold self:socket create_socket_perms;
+allowxperm suntrold self:socket ioctl msm_sock_ipc_ioctls;
+allowxperm suntrold tee_device:socket ioctl msm_sock_ipc_ioctls;

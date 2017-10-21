@@ -3,6 +3,7 @@ type wv_exec, exec_type, file_type;
 init_daemon_domain(wv)
 
 allow wv ion_device:chr_file { open read };
+allowxperm wv ion_device:chr_file ioctl msm_sock_ipc_ioctls;
 allow wv suntrold:unix_stream_socket connectto;
 allow wv suntrold_sock_socket:dir search;
 allow wv suntrold_sock_socket:sock_file write;
@@ -11,7 +12,9 @@ allow wv tad_socket:sock_file { getattr write };
 allow wv tad_socket:unix_stream_socket connectto;
 allow wv tee_device:chr_file { open read write };
 allow wv tee_device:unix_stream_socket connectto;
+allowxperm wv tee_device:chr_file ioctl msm_sock_ipc_ioctls;
 allow wv tee_device:sock_file write;
+allowxperm wv tad_socket:socket ioctl msm_sock_ipc_ioctls;
 
 #============= wv ==============
 allow wv firmware_file:dir search;

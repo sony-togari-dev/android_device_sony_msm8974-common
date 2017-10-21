@@ -1,3 +1,7 @@
 #============= qmuxd ==============
 qmux_socket(radio)
 allow radio sysfs_touch:file rw_file_perms;
+
+# whitelist ioctl commands
+allow qmuxd self:socket create_socket_perms;
+allowxperm qmuxd self:socket ioctl msm_sock_ipc_ioctls;
