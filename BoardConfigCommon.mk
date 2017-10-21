@@ -71,7 +71,6 @@ BOARD_HARDWARE_CLASS += device/sony/msm8974-common/cmhw
 # Font
 EXTENDED_FONT_FOOTPRINT := true
 
-TARGET_FS_CONFIG_GEN += device/sony/msm8974-common/aids.fs
 # Graphics
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true

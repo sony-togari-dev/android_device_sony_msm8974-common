@@ -92,11 +92,6 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libstagefrighthw
 
-# For android_filesystem_config.h
-PRODUCT_PACKAGES += \
-    fs_config_files \
-    liboemaids
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 ifneq ($(BOARD_HAVE_RADIO),false)
