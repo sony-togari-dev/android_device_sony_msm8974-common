@@ -39,12 +39,31 @@ LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_32_BIT_ONLY := true
 include $(BUILD_SHARED_LIBRARY)
 
+# LibGraphicBuffer
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES := libGraphicBuffer.cpp
+
+LOCAL_SRC_FILES := \
+    camera/ui/GraphicBuffer.cpp \
+    camera/ui/GraphicBufferAllocator.cpp \
+    camera/ui/GraphicBufferMapper.cpp \
+    camera/utils/Looper.cpp \
+    camera/utils/VectorImpl.cpp
+
+LOCAL_C_INCLUDES := \
+    camera/include \
+    external/safe-iop/include \
+    system/core/libutils
+
+LOCAL_SHARED_LIBRARIES := \
+    libcutils \
+    libhardware \
+    liblog \
+    libui \
+    libsync \
+    libutils
+
 LOCAL_MODULE := libGraphicBuffer
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_C_INCLUDES := gui
-LOCAL_SHARED_LIBRARIES := liblog libui
-LOCAL_32_BIT_ONLY := true
+
 include $(BUILD_SHARED_LIBRARY)
