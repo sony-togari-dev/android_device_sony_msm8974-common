@@ -1,3 +1,4 @@
+# policies for mediaserver
 allow mediaserver camera_socket:dir { search write add_name };
 allow mediaserver camera_socket:file { read write getattr open };
 allow mediaserver camera_data_file:dir search;
@@ -25,3 +26,21 @@ allow mediaserver sysfs:file write;
 allow mediaserver sysfs_battery_supply:dir search;
 allow mediaserver sysfs_battery_supply:file { getattr open read };
 
+allow mediaserver self:socket create_socket_perms_no_ioctl;
+allow mediaserver camera_data_file:sock_file w_file_perms;
+allow mediaserver system_server:unix_stream_socket connectto;
+
+rw_dir_file(mediaserver, camera_data_file)
+allow mediaserver camera_data_file:dir search;
+
+
+# allow /data/misc/camera/ sockets
+auditallow mediaserver camera_socket:sock_file write;
+auditallow mediaserver mm-qcamerad:unix_dgram_socket sendto;
+
+# allow credmgrd socket for cald server
+auditallow mediaserver credmgrd_socket:sock_file write;
+
+# allow procfs reading/writing
+allow mediaserver camera_prop:file { getattr open read };
+allow mediaserver proc:file { open read };

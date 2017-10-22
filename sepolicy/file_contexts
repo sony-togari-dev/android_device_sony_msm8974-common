@@ -1,5 +1,6 @@
 # Trim Area daemon
 /dev/socket/tad                        u:object_r:tad_socket:s0
+/dev/socket/credmgr                    u:object_r:credmgrd_socket:s0
 
 # CPU governor controls
 /dev/socket/mpdecision(/.*)?           u:object_r:mpctl_socket:s0
