@@ -74,6 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    camera.disable_treble=true \
     ro.qc.sdk.camera.facialproc=false \
     ro.qc.sdk.gestures.camera=false \
     camera.disable_zsl_mode=1 \
