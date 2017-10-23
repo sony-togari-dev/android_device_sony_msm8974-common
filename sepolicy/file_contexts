@@ -1,6 +1,8 @@
 # Trim Area daemon
 /dev/socket/tad                        u:object_r:tad_socket:s0
 /dev/socket/credmgr                    u:object_r:credmgrd_socket:s0
+/cache/CredentialManagerData           u:object_r:credmgrd_data_file:s0
+/cache/credmgr.log                     u:object_r:credmgrd_data_file:s0
 
 # CPU governor controls
 /dev/socket/mpdecision(/.*)?           u:object_r:mpctl_socket:s0
@@ -70,6 +72,7 @@
 # System files
 #
 /system/bin/credmgrd                   u:object_r:credmgrd_exec:s0
+/system/bin/credmgrfirstboot.sh        u:object_r:credmgrd_exec:s0
 /system/bin/iddd                       u:object_r:iddd_exec:s0
 /system/bin/wvkbd                      u:object_r:wv_exec:s0
 /system/bin/macaddrsetup               u:object_r:addrsetup_exec:s0
