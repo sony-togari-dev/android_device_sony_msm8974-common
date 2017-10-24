@@ -5,13 +5,20 @@ allow mpdecision socket_device:dir w_dir_perms;
 allow mpdecision system_data_file:dir rw_dir_perms;
 type_transition mpdecision system_data_file:file mpctl_data_file;
 
-#============= mpdecision ==============
+# Allow notify through cgroups
 allow mpdecision cgroup:file read;
+
+# Allow mpdecision properties read
 allow mpdecision freq_prop:file { getattr open read };
+
+# self socket
+allow mpdecision system_data_file:sock_file { create unlink write };
+
+# Allow mpdecision to read/write into sysfs.
+# Workaround for the hotplug issue
 allow mpdecision proc:file { open read };
 allow mpdecision sysfs:dir { open read };
 allow mpdecision sysfs:file { getattr read };
 allow mpdecision sysfs_memory:dir search;
 allow mpdecision sysfs_memory:file { open read write };
-allow mpdecision system_data_file:sock_file { create unlink write };
-
+allow bootstat sysfs:file { getattr open read };

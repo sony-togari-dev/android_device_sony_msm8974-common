@@ -1,0 +1,4 @@
+#============= hwservicemanager ==============
+allow hwservicemanager proc:file { open read };
+allow hwservicemanager sysfs:file { getattr open read };
+
