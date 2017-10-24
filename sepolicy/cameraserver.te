@@ -1,14 +1,17 @@
-# TODO: useless now?
+# communicate with camera
+allow cameraserver camera_data_file:sock_file write;
 
-#============= cameraserver ==============
-allow cameraserver camera_data_file:unix_dgram_socket sendto;
-allow cameraserver camera_data_file:unix_stream_socket connectto;
-allow cameraserver camera_device:chr_file { ioctl open read write };
+allow cameraserver gpu_device:chr_file rw_file_perms;
+allow cameraserver rootfs:lnk_file getattr;
 
-allow cameraserver ion_device:chr_file { ioctl open read };
+allow cameraserver surfaceflinger:unix_stream_socket { read write };
 
+allow cameraserver camera_prop:property_service set;
+allow cameraserver init:unix_stream_socket connectto;
+allow cameraserver property_socket:sock_file write;
+
+allow cameraserver sysfs:file r_file_perms;
+allow cameraserver camera_prop:file r_file_perms;
+
+# connect to /data/misc/camera sockets
 allow cameraserver mm-qcamerad:unix_stream_socket connectto;
-
-allow cameraserver credmgrd:unix_stream_socket connectto;
-allow cameraserver credmgrd_socket:sock_file write;
-

@@ -23,3 +23,8 @@ allow taimport ta_prop:property_service set;
 # Allow reading system properties
 allow taimport init:unix_stream_socket connectto;
 allow taimport proc:file { open read };
+
+
+#============= taimport ==============
+# TODO: wrong labeled prop!
+auditallow taimport default_prop:property_service set;

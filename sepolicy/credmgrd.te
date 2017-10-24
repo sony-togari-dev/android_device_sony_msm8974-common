@@ -20,8 +20,8 @@ allowxperm credmgrd self:socket ioctl msm_sock_ipc_ioctls;
 allow credmgrd tad:unix_stream_socket connectto;
 allow credmgrd tad_block_device:blk_file { read write open };
 allowxperm credmgrd tad_block_device:socket ioctl msm_sock_ipc_ioctls;
-allow credmgrd tad_socket:unix_dgram_socket sendto;
-allow credmgrd tad_socket:unix_stream_socket connectto;
+auditallow credmgrd tad_socket:unix_dgram_socket sendto;
+auditallow credmgrd tad_socket:unix_stream_socket connectto;
 allow credmgrd tad_socket:sock_file write;
 
 #credmgrd camera server
@@ -36,29 +36,27 @@ allow credmgrd mm-qcamerad:file { read write getattr open };
 allow credmgrd mm-qcamerad:unix_stream_socket { connectto sendto };
 
 #credmgrd qseecomd tee
-allow credmgrd tee_device:chr_file rw_file_perms;
+allow credmgrd tee_device:chr_file { open read write };
+allowxperm credmgrd tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
 
 #credmgrd suntrold
 allow credmgrd suntrold:unix_stream_socket connectto;
-allow credmgrd suntrold_sock_socket:dir search;
-allow credmgrd suntrold_sock_socket:unix_dgram_socket sendto;
-allow credmgrd suntrold_sock_socket:unix_stream_socket connectto;
 allow credmgrd suntrold_sock_socket:sock_file write;
 
 #credmgrd iddd
+allow credmgrd firmware_file:file { getattr open read };
 allow credmgrd iddd:unix_dgram_socket sendto;
-allow credmgrd iddd_file:dir search;
-allow credmgrd iddd_file:sock_file write;
-allow credmgrd iddd_file:unix_stream_socket connectto;
-allow credmgrd iddd_file:unix_dgram_socket sendto;
-allow credmgrd iddd_file:lnk_file { read };
+allow credmgrd iddd_socket:sock_file write;
 
 #/mnt/idd is tmpfs
 allow credmgrd tmpfs:dir search;
 allow credmgrd tmpfs:lnk_file read;
+allow credmgrd iddd_file:dir search;
+allow credmgrd iddd_socket:dir search;
+
 
 #credmgrd ion
-allow credmgrd ion_device:chr_file { open read };
+allow credmgrd ion_device:chr_file { rw_file_perms };
 allowxperm credmgrd ion_device:socket ioctl msm_sock_ipc_ioctls;
 
 #============= credmgr init script ==============
@@ -74,8 +72,10 @@ allow credmgrd system_prop:property_service set;
 allow credmgrd system_data_file:dir { add_name create relabelfrom remove_name setattr write };
 allow toolbox credmgrd_prop:property_service set;
 allow toolbox sensors_prop:property_service set;
+allow credmgrd toolbox_exec:file { execute execute_no_trans getattr open read };
 
 #TODO: wrong labeled on dest socket?
 allow credmgrd init:unix_stream_socket connectto;
-
-allow credmgrd toolbox_exec:file { execute execute_no_trans getattr open read };
+allow credmgrd proc:file { open read };
+allow credmgrd sysfs:file { getattr open read };
+allow init socket_device:sock_file { create setattr };

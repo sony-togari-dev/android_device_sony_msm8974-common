@@ -14,9 +14,16 @@ allow suntrold suntrold_sock_socket:dir { add_name search write };
 allow suntrold suntrold_sock_socket:sock_file { create setattr };
 allow suntrold tad:unix_stream_socket connectto;
 allow suntrold tad_socket:sock_file write;
-allow suntrold tee_device:chr_file { open read write };
 
 # whitelist ioctl commands
 allow suntrold self:socket create_socket_perms;
 allowxperm suntrold self:socket ioctl msm_sock_ipc_ioctls;
-allowxperm suntrold tee_device:socket ioctl msm_sock_ipc_ioctls;
+
+# qseecom
+allowxperm suntrold tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
+
+
+# Allow qseecom socket
+allow suntrold tee_device:chr_file { open read write };
+auditallowxperm suntrold tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
+auditallow suntrold tee_device:chr_file rw_file_perms;

@@ -7,6 +7,11 @@ allow system_server iddd_exec:dir search;
 allow system_server iddd_exec:file { getattr open read };
 allow system_server time_daemon:unix_stream_socket connectto; 
 
+# sensors
+allow system_server sensors:unix_stream_socket connectto;
+allow system_server sensors_socket:sock_file write;
+
+
 r_dir_file(system_server, sysfs_addrsetup)
 
 allow system_server unlabeled:file unlink;

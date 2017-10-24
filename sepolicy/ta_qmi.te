@@ -25,3 +25,8 @@ allow ta_qmi init:unix_stream_socket connectto;
 
 allow ta_qmi ta_prop:file { getattr open read };
 allow ta_qmi ta_prop:property_service set;
+
+#============= ta_qmi ==============
+# TODO: wrong labeled dest!
+auditallow ta_qmi proc:file { open read };
+auditallow ta_qmi sysfs:file { getattr open read };

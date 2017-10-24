@@ -21,8 +21,8 @@ allow tad iddd:unix_dgram_socket sendto;
 allowxperm tad iddd:socket ioctl msm_sock_ipc_ioctls;
 allow tad iddd_file:sock_file write;
 allow tad iddd_file:dir search;
+allow tad iddd_socket:sock_file write;
 
 #tad random audit2allow
 allow tad proc:file { open read };
 allow tad rootfs:file { entrypoint read };
-
