@@ -40,3 +40,10 @@ define(`ION_IOC_SHARE', `0x00004903')
 define(`ION_IOC_IMPORT', `0x00004904')
 define(`ION_IOC_SYNC', `0x00004905')
 define(`ION_IOC_CUSTOM', `0x00004906')
+
+# media ioctl defined into include/linux/media.h
+define(`MEDIA_IOC_DEVICE_INFO', `0x00007c00')
+define(`MEDIA_IOC_DEVICE_INFO', `0x00007c01')
+define(`MEDIA_IOC_DEVICE_INFO', `0x00007c02')
+define(`MEDIA_IOC_DEVICE_INFO', `0x00007c03')
+
