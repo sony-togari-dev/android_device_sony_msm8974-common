@@ -30,6 +30,7 @@ endif
 
 # use CAF variants
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
