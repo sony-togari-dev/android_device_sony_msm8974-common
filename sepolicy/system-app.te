@@ -1,5 +1,5 @@
 allow system_app time_data_file:dir search;
-allow system_app time_data_file:file { write open};
+allow system_app time_data_file:file { write open getattr };
 
 # Timekeep
 set_prop(system_app, timekeep_prop)

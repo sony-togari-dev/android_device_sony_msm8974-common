@@ -128,3 +128,6 @@
 
 # ZRAM
 /sys/devices/virtual/block/zram0/mm_stat                                          u:object_r:sysfs_zram:s0
+
+# Timekeep
+/sys/devices/qpnp-rtc-17/rtc/rtc0/since_epoch                                     u:object_r:sysfs_timekeep:s0
