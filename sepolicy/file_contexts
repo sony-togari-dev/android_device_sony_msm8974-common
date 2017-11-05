@@ -4,9 +4,10 @@
 /cache/CredentialManagerData           u:object_r:credmgrd_data_file:s0
 /cache/credmgr.log                     u:object_r:credmgrd_data_file:s0
 
-# CPU governor controls
+# CPU governor controls and related
 /dev/socket/mpdecision(/.*)?           u:object_r:mpctl_socket:s0
 /dev/socket/mpctl                      u:object_r:mpctl_socket:s0
+/sys/devices/system/cpu/online         u:object_r:sysfs_devices_system_cpu:s0
 
 # devices
 /dev/msm_acdb                          u:object_r:audio_device:s0
