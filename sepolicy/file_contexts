@@ -83,7 +83,6 @@
 /system/bin/credmgrfirstboot.sh        u:object_r:credmgrd_exec:s0
 /system/bin/iddd                       u:object_r:iddd_exec:s0
 /system/bin/wvkbd                      u:object_r:wv_exec:s0
-/system/bin/macaddrsetup               u:object_r:addrsetup_exec:s0
 /system/bin/irsc_util                  u:object_r:irsc_util_exec:s0
 /system/bin/mm-qcamera-daemon          u:object_r:mm-qcamerad_exec:s0
 /system/bin/msm_irqbalance             u:object_r:msm_irqbalanced_exec:s0
@@ -96,6 +95,7 @@
 /system/sbin/tad_static                u:object_r:tad_exec:s0
 /system/bin/mpdecision                 u:object_r:mpdecision_exec:s0
 /system/bin/time_daemon                u:object_r:time_daemon_exec:s0
+/system/vendor/bin/macaddrsetup        u:object_r:addrsetup_exec:s0
 
 # /sbin
 /sbin/tad_static                       u:object_r:tad_exec:s0
