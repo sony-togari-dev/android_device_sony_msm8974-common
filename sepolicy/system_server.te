@@ -16,3 +16,6 @@ r_dir_file(system_server, sysfs_addrsetup)
 
 allow system_server unlabeled:file unlink;
 qmux_socket(system_server)
+
+# mpdecision
+allow system_server mpdecision:unix_stream_socket connectto;
