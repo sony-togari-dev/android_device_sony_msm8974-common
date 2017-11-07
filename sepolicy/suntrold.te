@@ -20,10 +20,5 @@ allow suntrold self:socket create_socket_perms;
 allowxperm suntrold self:socket ioctl msm_sock_ipc_ioctls;
 
 # qseecom
+allow suntrold tee_device:chr_file rw_file_perms;
 allowxperm suntrold tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
-
-
-# Allow qseecom socket
-allow suntrold tee_device:chr_file { open read write };
-auditallowxperm suntrold tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
-auditallow suntrold tee_device:chr_file rw_file_perms;

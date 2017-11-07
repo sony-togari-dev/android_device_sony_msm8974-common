@@ -20,8 +20,8 @@ allowxperm credmgrd self:socket ioctl msm_sock_ipc_ioctls;
 allow credmgrd tad:unix_stream_socket connectto;
 allow credmgrd tad_block_device:blk_file { read write open };
 allowxperm credmgrd tad_block_device:socket ioctl msm_sock_ipc_ioctls;
-auditallow credmgrd tad_socket:unix_dgram_socket sendto;
-auditallow credmgrd tad_socket:unix_stream_socket connectto;
+allow credmgrd tad_socket:unix_dgram_socket sendto;
+allow credmgrd tad_socket:unix_stream_socket connectto;
 allow credmgrd tad_socket:sock_file write;
 
 #credmgrd camera server

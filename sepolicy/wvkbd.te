@@ -2,27 +2,29 @@ type wv,domain;
 type wv_exec, exec_type, file_type;
 init_daemon_domain(wv)
 
-allow wv ion_device:chr_file { open read };
+# suntrold socket access
 allow wv suntrold:unix_stream_socket connectto;
 allow wv suntrold_sock_socket:dir search;
 allow wv suntrold_sock_socket:sock_file write;
+
+# tad socket access
 allow wv tad:unix_stream_socket connectto;
 allow wv tad_socket:sock_file { getattr write };
 allow wv tad_socket:unix_stream_socket connectto;
 
-#============= wv ==============
+# FW file access
 allow wv firmware_file:dir search;
 allow wv firmware_file:file { getattr open read };
 
-#============= wv ==============
+# Allow qseecomd
+allow wv ion_device:chr_file rw_file_perms;
+allowxperm wv ion_device:chr_file ioctl ion_sock_ipc_ioctls;
+
+# Allow ion
+allow wv tee_device:chr_file rw_file_perms;
+allowxperm wv tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
+
+# ProcFS and SysFS
 # TODO: wrong labeled dest!
 allow wv proc:file { open read };
 allow wv sysfs:file { getattr open read };
-
-# Allow qseecomd
-auditallowxperm wv tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
-auditallow wv tee_device:chr_file { rw_file_perms read write };
-
-# Allow ion
-auditallowxperm wv ion_device:chr_file ioctl ion_sock_ipc_ioctls;
-auditallow wv ion_device:chr_file rw_file_perms;

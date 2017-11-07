@@ -33,13 +33,12 @@ allow mediaserver system_server:unix_stream_socket connectto;
 rw_dir_file(mediaserver, camera_data_file)
 allow mediaserver camera_data_file:dir search;
 
-
 # allow /data/misc/camera/ sockets
-auditallow mediaserver camera_socket:sock_file write;
-auditallow mediaserver mm-qcamerad:unix_dgram_socket sendto;
+allow mediaserver camera_socket:sock_file rw_file_perms;
+allow mediaserver mm-qcamerad:unix_dgram_socket sendto;
 
 # allow credmgrd socket for cald server
-auditallow mediaserver credmgrd_socket:sock_file write;
+allow mediaserver credmgrd_socket:sock_file rw_file_perms;
 
 # allow procfs reading/writing
 allow mediaserver camera_prop:file { getattr open read };
