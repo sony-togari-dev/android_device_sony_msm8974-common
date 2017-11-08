@@ -36,7 +36,7 @@ allow credmgrd mm-qcamerad:file { read write getattr open };
 allow credmgrd mm-qcamerad:unix_stream_socket { connectto sendto };
 
 #credmgrd qseecomd tee
-allow credmgrd tee_device:chr_file { open read write };
+allow credmgrd tee_device:chr_file rw_file_perms;
 allowxperm credmgrd tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
 
 #credmgrd suntrold
