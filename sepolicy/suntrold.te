@@ -6,7 +6,6 @@ type suntrold_sock_socket, file_type;
 init_daemon_domain(suntrold)
 
 #suntrold self
-allow suntrold ion_device:chr_file { open read };
 allow suntrold self:dir rw_file_perms;
 allow suntrold socket_device:dir { add_name write };
 allow suntrold socket_device:sock_file { create getattr setattr };
@@ -15,6 +14,9 @@ allow suntrold suntrold_sock_socket:sock_file { create setattr };
 allow suntrold tad:unix_stream_socket connectto;
 allow suntrold tad_socket:sock_file write;
 
+# firmware file access
+allow suntrold firmware_file:file r_file_perms;
+
 # whitelist ioctl commands
 allow suntrold self:socket create_socket_perms;
 allowxperm suntrold self:socket ioctl msm_sock_ipc_ioctls;
@@ -22,3 +24,7 @@ allowxperm suntrold self:socket ioctl msm_sock_ipc_ioctls;
 # qseecom
 allow suntrold tee_device:chr_file rw_file_perms;
 allowxperm suntrold tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
+
+# ion
+allow suntrold ion_device:chr_file rw_file_perms;
+allowxperm suntrold ion_device:socket ioctl msm_sock_ipc_ioctls;
