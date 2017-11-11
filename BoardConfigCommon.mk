@@ -110,3 +110,6 @@ include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     device/sony/msm8974-common/sepolicy
+
+# Treble
+DEVICE_MANIFEST_FILE := device/sony/msm8974-common/treble-manifest.xml
