@@ -1,8 +1,8 @@
 #============= netmgrd ==============
 allow netmgrd net_data_file:dir read;
 allow netmgrd netd_socket:sock_file write;
+allow netmgrd self:capability dac_override;
 
 # TODO: wrong labeled ?
-allow netmgrd proc:file read;
 allow netmgrd shell_exec:file { execute getattr read };
 allow netmgrd toolbox_exec:file { execute getattr };
