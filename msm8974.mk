@@ -41,11 +41,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
-# Specific apps
-PRODUCT_PACKAGES += \
-    Snap \
-    Jelly
-
 # Display
 PRODUCT_PACKAGES += \
     hwcomposer.msm8974 \
