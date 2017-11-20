@@ -71,7 +71,6 @@
 #
 /system/bin/credmgrfirstboot.sh        u:object_r:credmgrd_exec:s0
 /system/bin/qseeproxydaemon            u:object_r:tee_exec:s0
-/system/bin/thermanager                u:object_r:thermanager_exec:s0
 /system/vendor/bin/credmgrd            u:object_r:credmgrd_exec:s0
 /system/vendor/bin/iddd                u:object_r:iddd_exec:s0
 /system/vendor/bin/idd-logreader       u:object_r:iddd_exec:s0
@@ -80,6 +79,7 @@
 /system/vendor/bin/suntrold            u:object_r:suntrold_exec:s0
 /system/vendor/bin/ta_qmi_service      u:object_r:ta_qmi_exec:s0
 /system/vendor/bin/taimport            u:object_r:taimport_exec:s0
+/system/vendor/bin/thermanager         u:object_r:thermanager_exec:s0
 /system/vendor/bin/timekeep            u:object_r:timekeep_exec:s0
 /system/vendor/bin/updatemiscta        u:object_r:ta_qmi_exec:s0
 /system/vendor/bin/wvkbd               u:object_r:wv_exec:s0
