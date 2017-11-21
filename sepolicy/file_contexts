@@ -69,6 +69,7 @@
 ###################################
 # System files
 #
+/system/bin/audiod        			   u:object_r:proc_audiod:s0
 /system/bin/credmgrfirstboot.sh        u:object_r:credmgrd_exec:s0
 /system/bin/qseeproxydaemon            u:object_r:tee_exec:s0
 /system/vendor/bin/credmgrd            u:object_r:credmgrd_exec:s0

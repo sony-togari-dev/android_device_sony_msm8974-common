@@ -13,6 +13,9 @@ allow system_server proc_audiod:file r_file_perms;
 # debugfs
 allow system_server qti_debugfs:file r_file_perms;
 
+# audio deamon
+allow system_server proc_audiod:file r_file_perms;
+
 # sensors
 allow system_server sensors:unix_stream_socket connectto;
 allow system_server sensors_socket:sock_file write;
