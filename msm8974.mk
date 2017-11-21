@@ -54,6 +54,16 @@ PRODUCT_PACKAGES += \
     libtilerenderer \
     libI420colorconvert
 
+# GPS
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/gps/flp.conf:system/etc/flp.conf \
+    $(COMMON_PATH)/gps/gps.conf:system/etc/gps.conf \
+    $(COMMON_PATH)/gps/izat.conf:system/etc/izat.conf \
+    $(COMMON_PATH)/gps/sap.conf:system/etc/sap.conf \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml
+PRODUCT_PACKAGES += \
+    gps.msm8974
+
 # Ion
 PRODUCT_PACKAGES += \
     libion
