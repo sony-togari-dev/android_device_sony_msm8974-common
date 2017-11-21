@@ -7,10 +7,13 @@ allow system_server iddd_exec:dir search;
 allow system_server iddd_exec:file { getattr open read };
 allow system_server time_daemon:unix_stream_socket connectto; 
 
+# audio deamon
+allow system_server proc_audiod:file r_file_perms;
+
 # sensors
 allow system_server sensors:unix_stream_socket connectto;
 allow system_server sensors_socket:sock_file write;
-
+allow system_server sensors_device:chr_file r_file_perms;
 
 r_dir_file(system_server, sysfs_addrsetup)
 
