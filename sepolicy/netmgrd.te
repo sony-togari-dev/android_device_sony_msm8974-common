@@ -5,4 +5,4 @@ allow netmgrd self:capability dac_override;
 
 # TODO: wrong labeled ?
 allow netmgrd shell_exec:file rx_file_perms;
-allow netmgrd toolbox_exec:file { execute getattr };
+allow netmgrd toolbox_exec:file rx_file_perms;
