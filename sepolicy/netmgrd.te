@@ -3,6 +3,8 @@ allow netmgrd net_data_file:dir read;
 allow netmgrd netd_socket:sock_file write;
 allow netmgrd self:capability dac_override;
 
+allow netmgrd sysfs_subsys:file r_file_perms;
+
 # TODO: wrong labeled ?
 allow netmgrd shell_exec:file rx_file_perms;
 allow netmgrd toolbox_exec:file rx_file_perms;
