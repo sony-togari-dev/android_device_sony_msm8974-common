@@ -44,7 +44,8 @@ allow credmgrd suntrold:unix_stream_socket connectto;
 allow credmgrd suntrold_sock_socket:sock_file write;
 
 #credmgrd iddd
-allow credmgrd firmware_file:file { getattr open read };
+allow credmgrd firmware_file:dir { search r_dir_perms };
+allow credmgrd firmware_file:file r_file_perms;
 allow credmgrd iddd:unix_dgram_socket sendto;
 allow credmgrd iddd_socket:sock_file write;
 
