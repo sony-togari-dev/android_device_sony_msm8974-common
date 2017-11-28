@@ -6,6 +6,9 @@ allow bluetooth self:capability2 { wake_alarm block_suspend };
 allow bluetooth smd_device:chr_file { read write open };
 allow bluetooth ta_data_file:dir search;
 
+# FW file search
+allow bluetooth firmware_file:dir search;
+
 # whitelist ioctl commands
 allow bluetooth self:socket create_socket_perms;
 allowxperm bluetooth bluetooth:socket ioctl msm_sock_ipc_ioctls;
