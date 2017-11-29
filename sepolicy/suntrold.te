@@ -28,3 +28,6 @@ allowxperm suntrold tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
 # ion
 allow suntrold ion_device:chr_file rw_file_perms;
 allowxperm suntrold ion_device:socket ioctl msm_sock_ipc_ioctls;
+
+# FW file search
+allow suntrold firmware_file:dir search;
