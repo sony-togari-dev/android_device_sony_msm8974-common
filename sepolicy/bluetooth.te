@@ -1,7 +1,7 @@
 type start_hci_filter, domain;
 type start_hci_filter_exec, exec_type, file_type;
 
-allow bluetooth self:capability2 { wake_alarm block_suspend };
+allow bluetooth self:capability2 wake_alarm;
 
 allow bluetooth smd_device:chr_file { read write open };
 allow bluetooth ta_data_file:dir search;
