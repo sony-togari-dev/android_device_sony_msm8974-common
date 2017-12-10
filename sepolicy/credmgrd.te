@@ -42,6 +42,7 @@ allowxperm credmgrd tee_device:chr_file ioctl qseecom_sock_ipc_ioctls;
 #credmgrd suntrold
 allow credmgrd suntrold:unix_stream_socket connectto;
 allow credmgrd suntrold_sock_socket:sock_file write;
+allow credmgrd suntrold_sock_socket:dir search;
 
 #credmgrd iddd
 allow credmgrd firmware_file:dir { search r_dir_perms };
