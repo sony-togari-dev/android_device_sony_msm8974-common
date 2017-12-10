@@ -1,0 +1,2 @@
+# Camera apps access to cam props
+allow untrusted_app_25 camera_prop:file r_file_perms;
