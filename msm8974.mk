@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    $(LOCAL_PATH)/audio/audio_effects.xml:system/vendor/etc/audio_effects.xml
 
 # Display
 PRODUCT_PACKAGES += \
