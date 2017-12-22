@@ -35,12 +35,15 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
- 
+    android.hardware.gnss@1.0-impl \
+    android.hardware.gnss@1.0 \
+    android.hardware.gnss-V1.0-java
+
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl	 
- 	
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-service
+
 # Keymaster
 PRODUCT_PACKAGES += \
 	android.hardware.keymaster@3.0-impl \
