@@ -3,30 +3,24 @@
     "remote": "lineage",
     "repository": "LineageOS/android_device_sony_common",
     "target_path": "device/sony/common-caf",
-    "revision": "cm-14.1"
+    "revision": "lineage-15.0"
   },
   {
     "remote": "lineage",
     "repository": "LineageOS/android_device_qcom_common",
     "target_path": "device/qcom/common",
-    "revision": "cm-14.1"
+    "revision": "lineage-15.0"
   },
   {
-    "remote": "lineage",
-    "repository": "LineageOS/android_hardware_sony_thermanager",
+    "remote": "gh",
+    "repository": "omnirom/android_hardware_sony_thermanager",
     "target_path": "hardware/sony/thermanager",
-    "revision": "cm-14.1"
+    "revision": "android-8.1"
   },
   {
-    "remote": "lineage",
-    "repository": "LineageOS/android_hardware_sony_macaddrsetup",
+    "remote": "gh",
+    "repository": "omnirom/android_hardware_sony_macaddrsetup",
     "target_path": "hardware/sony/macaddrsetup",
-    "revision": "cm-14.1"
-  },
-  {
-    "remote": "lineage",
-    "repository": "LineageOS/android_external_stlport",
-    "target_path": "external/stlport",
-    "revision": "cm-14.1"
+    "revision": "android-8.1"
   }
 ]
