@@ -58,7 +58,8 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-	android.hardware.nfc@1.0-impl
+	android.hardware.nfc@1.0-impl \
+	android.hardware.nfc@1.0-service
 	
 # Netd
 PRODUCT_PACKAGES += \
@@ -67,7 +68,7 @@ PRODUCT_PACKAGES += \
 # Netutils
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
-	
+
 # Power
 PRODUCT_PACKAGES += \
 	android.hardware.power@1.0-impl \
