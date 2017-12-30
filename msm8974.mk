@@ -22,7 +22,7 @@ $(call inherit-product, device/sony/msm8974-common/hidl.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/vendor/system/etc/permissions_sony.xml:vendor/system/etc/permissions_sony.xml
+    $(COMMON_PATH)/rootdir/system/vendor/etc/permissions/permissions_sony.xml:system/vendor/etc/permissions/permissions_sony.xml
 
 # Audio
 PRODUCT_PACKAGES += \
