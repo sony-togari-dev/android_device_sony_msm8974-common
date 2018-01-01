@@ -1,0 +1,4 @@
+#============= servicemanager ==============
+allow servicemanager init:dir search;
+allow servicemanager rild:dir search;
+allow servicemanager rild:file r_file_perms;
