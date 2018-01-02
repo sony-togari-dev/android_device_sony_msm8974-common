@@ -15,3 +15,7 @@ allow cameraserver camera_prop:file r_file_perms;
 
 # connect to /data/misc/camera sockets
 allow cameraserver mm-qcamerad:unix_stream_socket connectto;
+
+# credmgr socket
+allow cameraserver credmgrd:unix_stream_socket connectto;
+allow cameraserver credmgrd_socket:sock_file w_file_perms;
