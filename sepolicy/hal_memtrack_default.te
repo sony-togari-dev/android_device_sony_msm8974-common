@@ -1,14 +1,4 @@
-allow hal_memtrack_default credmgrd:dir search;
-allow hal_memtrack_default credmgrd:file r_file_perms;
-allow hal_memtrack_default debugfs_kgsl:dir search;
-allow hal_memtrack_default debugfs_kgsl:file r_file_perms;
-allow hal_memtrack_default oemfs:dir search;
-allow hal_memtrack_default system_app:dir search;
-allow hal_memtrack_default system_app:file r_file_perms;
-allow hal_memtrack_default servicemanager:dir search;
-allow hal_memtrack_default servicemanager:file r_file_perms;
-allow hal_memtrack_default hwservicemanager:dir search;
-allow hal_memtrack_default hwservicemanager:file r_file_perms;
+# Other HAL-related policies
 allow hal_memtrack_default hal_configstore_default:dir search;
 allow hal_memtrack_default hal_configstore_default:file r_file_perms;
 allow hal_memtrack_default hal_dumpstate_default:dir search;
@@ -27,20 +17,37 @@ allow hal_memtrack_default hal_thermal_default:dir search;
 allow hal_memtrack_default hal_thermal_default:file r_file_perms;
 allow hal_memtrack_default hal_usb_default:dir search;
 allow hal_memtrack_default hal_usb_default:file r_file_perms;
+allow hal_memtrack_default hwservicemanager:dir search;
+allow hal_memtrack_default hwservicemanager:file r_file_perms;
+allow hal_memtrack_default servicemanager:dir search;
+allow hal_memtrack_default servicemanager:file r_file_perms;
+allow hal_memtrack_default vndservicemanager:dir search;
+allow hal_memtrack_default vndservicemanager:file r_file_perms;
+
+# OEM/DebugFS
+allow hal_memtrack_default debugfs_kgsl:dir search;
+allow hal_memtrack_default debugfs_kgsl:file r_file_perms;
+allow hal_memtrack_default oemfs:dir search;
+
+# Sony/QCom-services
 allow hal_memtrack_default audiod:dir search;
 allow hal_memtrack_default audiod:file r_file_perms;
+allow hal_memtrack_default credmgrd:dir search;
+allow hal_memtrack_default credmgrd:file r_file_perms;
 allow hal_memtrack_default iddd:dir search;
 allow hal_memtrack_default iddd:file r_file_perms;
-allow hal_memtrack_default init:dir search;
-allow hal_memtrack_default init:file r_file_perms;
 allow hal_memtrack_default suntrold:dir search;
 allow hal_memtrack_default suntrold:file r_file_perms;
 allow hal_memtrack_default ta_qmi:dir search;
 allow hal_memtrack_default ta_qmi:file r_file_perms;
 allow hal_memtrack_default tad:dir search;
 allow hal_memtrack_default tad:file r_file_perms;
-allow hal_memtrack_default vndservicemanager:dir search;
-allow hal_memtrack_default vndservicemanager:file r_file_perms;
+
+# Others
+allow hal_memtrack_default init:dir search;
+allow hal_memtrack_default init:file r_file_perms;
+allow hal_memtrack_default system_app:dir search;
+allow hal_memtrack_default system_app:file r_file_perms;
 
 # Memtrack reads proc/<pid>/cmdline to check if process is surfaceflinger.
 # Grant access if that's the case; don't log denials for other processes.
