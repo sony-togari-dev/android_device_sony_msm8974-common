@@ -19,3 +19,7 @@ allow cameraserver mm-qcamerad:unix_stream_socket connectto;
 # credmgr socket
 allow cameraserver credmgrd:unix_stream_socket connectto;
 allow cameraserver credmgrd_socket:sock_file w_file_perms;
+
+# Configstore binding
+binder_call(cameraserver, hal_configstore_default);
+allow cameraserver hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
