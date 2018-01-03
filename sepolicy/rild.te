@@ -5,7 +5,7 @@ allow rild self:process execmem;
 allow rild servicemanager:binder call;
 allow rild tad_socket:sock_file write;
 allow rild tee_device:chr_file { read write open };
-allow rild radio_data_file:dir { add_name open read remove_name write };
+allow rild radio_data_file:dir { add_name open read remove_name search write };
 allow rild radio_data_file:file { create getattr ioctl lock open read unlink write };
 allow rild tee_device:chr_file getattr;
 
