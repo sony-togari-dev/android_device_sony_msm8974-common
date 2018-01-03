@@ -102,8 +102,11 @@
 /data/scd(/.*)                         u:object_r:scd_data:s0
 /system/bin/scdnotifier                u:object_r:scd_exec:s0
 
-#cam_socket
+# cam_socket
 /data/misc/camera(/.*)                 u:object_r:camera_data_file:s0
+
+# camera: flash
+/sys/devices/pm8941-flash-[0-9]+(/.*)?                                            u:object_r:sysfs_camera_torch:s0
 
 # macaddrsetup
 /sys/devices/platform/bcmdhd_wlan/macaddr                                         u:object_r:sysfs_addrsetup:s0

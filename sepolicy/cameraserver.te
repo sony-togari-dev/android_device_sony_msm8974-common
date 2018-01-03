@@ -10,7 +10,11 @@ allow cameraserver camera_prop:property_service set;
 allow cameraserver init:unix_stream_socket connectto;
 allow cameraserver property_socket:sock_file write;
 
-allow cameraserver sysfs:file r_file_perms;
+# Sysfs accesses
+allow cameraserver sysfs_camera_torch:file rw_file_perms;
+allow cameraserver sysfs_battery_supply:dir search;
+allow cameraserver sysfs_battery_supply:file r_file_perms;
+
 allow cameraserver camera_prop:file r_file_perms;
 
 # connect to /data/misc/camera sockets
