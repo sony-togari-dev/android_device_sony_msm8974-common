@@ -64,12 +64,16 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/gps/izat.conf:system/etc/izat.conf \
     $(COMMON_PATH)/gps/sap.conf:system/etc/sap.conf \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml
+
 PRODUCT_PACKAGES += \
-    libloc_core \
-    libloc_eng \
     libgps.utils \
-    gps.msm8974 \
-    libloc_api_v02
+    libgnss \
+    libgnsspps\
+    libloc_core \
+    libloc_pla \
+    libloc_api_v02 \
+    libloc_ds_api \
+    liblocation_api
 
 # Ion
 PRODUCT_PACKAGES += \

@@ -33,11 +33,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.broadcastradio@1.0-impl
 
-# GPS
+# GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0 \
-    android.hardware.gnss-V1.0-java
+    android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.0-service-qti
 
 # Health
 PRODUCT_PACKAGES += \
