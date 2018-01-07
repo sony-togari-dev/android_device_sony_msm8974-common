@@ -164,7 +164,7 @@
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IRadio</name>
+            <name>IOemHook</name>
             <instance>slot1</instance>
         </interface>
     </hal>
