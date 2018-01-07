@@ -74,7 +74,7 @@ allow credmgrd system_prop:property_service set;
 allow credmgrd system_data_file:dir { add_name create relabelfrom remove_name setattr write };
 allow toolbox credmgrd_prop:property_service set;
 allow toolbox sensors_prop:property_service set;
-allow credmgrd toolbox_exec:file { execute execute_no_trans getattr open read };
+allow credmgrd vendor_toolbox_exec:file { execute execute_no_trans getattr open read };
 allow credmgrd self:capability { dac_override chown fowner };
 allow credmgrd credmgrd_data_file:file ioctl;
 
