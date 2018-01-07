@@ -121,8 +121,7 @@ else
 endif
 
 # Power
-PRODUCT_PACKAGES += \
-    power.msm8974
+# now qti binderised
 
 # Camera (stock blobs)
 PRODUCT_PACKAGES += \
