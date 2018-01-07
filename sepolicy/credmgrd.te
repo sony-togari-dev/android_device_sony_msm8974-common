@@ -63,7 +63,7 @@ allowxperm credmgrd ion_device:socket ioctl msm_sock_ipc_ioctls;
 
 #============= credmgr init script ==============
 allow credmgrd cache_file:dir { add_name search };
-allow credmgrd cache_file:file { append create getattr open read unlink write };
+allow credmgrd cache_file:file create_file_perms;
 allow credmgrd credmgrd_data_file:dir { add_name getattr relabelto reparent rename rmdir search };
 allow credmgrd credmgrd_data_file:file { append getattr open read unlink write };
 allow credmgrd credmgrd_prop:property_service set;
@@ -75,7 +75,7 @@ allow credmgrd system_data_file:dir { add_name create relabelfrom remove_name se
 allow toolbox credmgrd_prop:property_service set;
 allow toolbox sensors_prop:property_service set;
 allow credmgrd vendor_toolbox_exec:file { execute execute_no_trans getattr open read };
-allow credmgrd self:capability { dac_override chown fowner };
+allow credmgrd self:capability { chown dac_override fowner fsetid };
 allow credmgrd credmgrd_data_file:file ioctl;
 
 #TODO: wrong labeled on dest socket?

@@ -3,7 +3,7 @@ unix_socket_connect(sensors, tad, tad)
 allow sensors ta_prop:file { getattr read open };
 
 # Access to data file/dirs
-allow sensors sensors_data_file:dir {setattr r_dir_perms};
+allow sensors sensors_data_file:dir create_dir_perms;
 allow sensors sensors_data_file:file create_file_perms;
 # Toolbox creates the sensor dirs in init
 allow toolbox sensors_data_file:dir getattr;

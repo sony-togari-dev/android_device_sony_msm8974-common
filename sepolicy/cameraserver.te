@@ -22,7 +22,8 @@ allow cameraserver camera_prop:file r_file_perms;
 # connect to /data/misc/camera sockets
 allow cameraserver mm-qcamerad:unix_stream_socket connectto;
 # camera socket
-allow cameraserver camera_socket:dir search;
+allow cameraserver camera_socket:dir rw_dir_perms;
+allow cameraserver camera_socket:file create_file_perms;
 
 # credmgr socket
 allow cameraserver credmgrd:unix_stream_socket connectto;
