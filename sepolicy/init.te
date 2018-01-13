@@ -12,7 +12,6 @@ allow init sysfs_camera_torch:lnk_file read;
 # Misc
 allow init cache_file:file append;
 allow init credmgrd_data_file:file append;
-allow init proc_audiod:file getattr;
 allow init property_socket:sock_file write;
 allow init sensors_device:chr_file getattr;
 
