@@ -1,2 +1,5 @@
 # Camera apps access to cam props
 allow untrusted_app_25 camera_prop:file r_file_perms;
+
+# KCAL calibration apps
+allow untrusted_app_25 sysfs_kcal_file:file rw_file_perms;
