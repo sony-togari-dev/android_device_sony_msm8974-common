@@ -45,6 +45,9 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 TARGET_CUSTOM_DTBTOOL := dtbToolLineage
 
+# Defines for HW subsystems
+-include $(PLATFORM_PATH)/hardware/*/BoardConfig.mk
+
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_DISABLED_USBAUDIO := true

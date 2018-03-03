@@ -14,6 +14,11 @@
 
 COMMON_PATH := device/sony/msm8974-common
 
+# Include HW subsystem-specific makefiles
+-include $(LOCAL_PATH)/hardware/*/packages.mk
+-include $(LOCAL_PATH)/hardware/*/copy.mk
+-include $(LOCAL_PATH)/hardware/*/prop.mk
+
 # Include msm8974-common system properties
 -include $(LOCAL_PATH)/systemprop.mk
 
