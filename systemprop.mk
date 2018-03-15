@@ -85,6 +85,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.legacyencoder=true \
     media.stagefright.less-secure=true
+    
+# Wi-Fi interface name
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0
 
 # MPDecision
 PRODUCT_PROPERTY_OVERRIDES += \
