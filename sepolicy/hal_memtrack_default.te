@@ -28,6 +28,7 @@ allow hal_memtrack_default vndservicemanager:file r_file_perms;
 allow hal_memtrack_default debugfs_kgsl:dir search;
 allow hal_memtrack_default debugfs_kgsl:file r_file_perms;
 allow hal_memtrack_default oemfs:dir search;
+allow hal_memtrack_default qti_debugfs:file r_file_perms;
 
 # Sony/QCom-services
 allow hal_memtrack_default credmgrd:dir search;
