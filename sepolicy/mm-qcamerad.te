@@ -10,6 +10,9 @@ allow mm-qcamerad ta_data_file:dir { getattr open read search };
 
 allow mm-qcamerad system_prop:property_service set;
 
+# mm-qcamerad needs to set persist.camera. property
+set_prop(mm-qcamerad, camera_prop)
+
 # whitelist ioctl commands
 allow mm-qcamerad self:socket create_socket_perms;
 allowxperm mm-qcamerad camera_device:socket ioctl msm_sock_ipc_ioctls;
