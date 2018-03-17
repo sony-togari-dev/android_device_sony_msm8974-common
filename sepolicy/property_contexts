@@ -10,3 +10,4 @@ ro.sony.color_id		u:object_r:ta_prop:s0
 init.taimport			u:object_r:ta_prop:s0
 camera.0.       		u:object_r:camera_prop:s0
 camera.1.               u:object_r:camera_prop:s0
+persist.audio.anc.enabled	u:object_r:anc_prop:s0

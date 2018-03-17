@@ -1,0 +1,2 @@
+# Allow platform apps to enable ANC
+set_prop(platform_app, anc_prop)
