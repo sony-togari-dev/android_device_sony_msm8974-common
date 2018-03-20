@@ -1,4 +1,4 @@
-allow system_app time_data_file:dir search;
+allow system_app time_data_file:dir { write search };
 allow system_app time_data_file:file { write open getattr };
 
 # Timekeep

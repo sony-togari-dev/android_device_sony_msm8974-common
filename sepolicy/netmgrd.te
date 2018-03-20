@@ -2,6 +2,7 @@
 allow netmgrd net_data_file:dir read;
 allow netmgrd netd_socket:sock_file write;
 allow netmgrd self:capability dac_override;
+allow netmgrd diag_device:chr_file { open read write };
 
 allow netmgrd sysfs_subsys:file r_file_perms;
 

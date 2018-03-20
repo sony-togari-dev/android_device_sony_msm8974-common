@@ -8,3 +8,12 @@ allow sensors sensors_data_file:file create_file_perms;
 # Toolbox creates the sensor dirs in init
 allow toolbox sensors_data_file:dir getattr;
 
+# Property socket
+set_prop(sensors, sensors_prop);
+
+# Sensor init script
+allow sensors vendor_toolbox_exec:file execute_no_trans;
+
+
+# Misc
+allow sensors diag_device:chr_file { read write };

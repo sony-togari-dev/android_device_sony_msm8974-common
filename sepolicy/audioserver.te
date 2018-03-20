@@ -1,4 +1,6 @@
 allow audioserver system_data_file:sock_file { write };
 allow audioserver system_server:unix_stream_socket { connectto };
+allow audioserver diag_device:chr_file { open read write };
+allow audioserver tee_device:chr_file { getattr };
 get_prop(audioserver, anc_prop)
 
