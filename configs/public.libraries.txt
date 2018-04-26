@@ -1,2 +1,4 @@
 libprotobuf-cpp-full.so
 libprotobuf-cpp-lite.so
+libadsprpc.so
+libOpenCL.so
