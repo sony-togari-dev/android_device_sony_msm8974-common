@@ -22,3 +22,4 @@ allowxperm mm-qcamerad camera_socket:sock_file ioctl msm_sock_ipc_ioctls;
 # TODO: wrong labeled dest!
 allow mm-qcamerad proc:file { open read };
 
+allow mm-qcamerad sysfs:file { open read };
