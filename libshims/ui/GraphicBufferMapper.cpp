@@ -26,7 +26,7 @@
 #include <utils/Log.h>
 #include <utils/Trace.h>
 
-#include <camera/include/ui/GraphicBufferMapper.h>
+#include <ui/GraphicBufferMapper.h>
 #include <ui/Rect.h>
 
 #include <hardware/gralloc.h>

@@ -25,7 +25,7 @@
 
 #include <SharedBuffer.h>
 #include <utils/Errors.h>
-#include <camera/include/utils/VectorImpl.h>
+#include <utils/VectorImpl.h>
 
 /*****************************************************************************/
 

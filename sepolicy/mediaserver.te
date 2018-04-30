@@ -14,9 +14,14 @@ allow mediaserver ta_data_file:dir { getattr open read  search };
 # HAL1 hacks stuff
 allow mediaserver camera_device:chr_file rw_file_perms;
 allow mediaserver audio_device:chr_file rw_file_perms;
+allow mediaserver mpctl_data_file:dir search;
+allow mediaserver mpctl_data_file:sock_file write;
+allow mediaserver sysfs_camera_torch:dir search;
+allow mediaserver sysfs_camera_torch:lnk_file read;
+allow mediaserver sysfs_camera_torch:file { open read write };
 
 allow mediaserver credmgrd_socket:sock_file write;
-
+allow mediaextractor sdcardfs:file getattr;
 allow mediaserver sensorservice_service:service_manager find;
 
 allow mediaserver sysfs:file write;
@@ -26,6 +31,8 @@ allow mediaserver sysfs_battery_supply:file { getattr open read };
 allow mediaserver self:socket create_socket_perms_no_ioctl;
 allow mediaserver camera_data_file:sock_file w_file_perms;
 allow mediaserver system_server:unix_stream_socket connectto;
+allow mediaserver mpdecision:unix_stream_socket connectto;
+
 
 rw_dir_file(mediaserver, camera_data_file)
 allow mediaserver camera_data_file:dir search;

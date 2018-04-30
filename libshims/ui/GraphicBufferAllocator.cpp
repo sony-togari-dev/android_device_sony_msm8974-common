@@ -24,7 +24,7 @@
 #include <utils/String8.h>
 #include <utils/Trace.h>
 
-#include <camera/include/ui/GraphicBufferAllocator.h>
+#include <ui/GraphicBufferAllocator.h>
 
 namespace android {
 // ---------------------------------------------------------------------------

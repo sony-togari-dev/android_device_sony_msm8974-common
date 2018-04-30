@@ -3,3 +3,4 @@ allow mediacodec system_server:fifo_file rw_file_perms;
 
 # Mediaextractor
 allow mediaextractor system_server:fifo_file rw_file_perms;
+allow mediaextractor sdcardfs:file read;

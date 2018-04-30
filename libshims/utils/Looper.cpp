@@ -14,7 +14,7 @@
 #define DEBUG_CALLBACKS 0
 
 #include <cutils/log.h>
-#include <camera/include/utils/Looper.h>
+#include <utils/Looper.h>
 #include <utils/Timers.h>
 
 #include <unistd.h>

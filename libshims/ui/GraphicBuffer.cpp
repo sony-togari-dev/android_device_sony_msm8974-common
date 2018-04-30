@@ -22,12 +22,10 @@
 
 #include <utils/Errors.h>
 #include <utils/Log.h>
-#include <utils/RefBase.h>
 
-#include <cutils/native_handle.h>
-#include <camera/include/ui/GraphicBuffer.h>
-#include <camera/include/ui/GraphicBufferAllocator.h>
-#include <camera/include/ui/GraphicBufferMapper.h>
+#include <ui/GraphicBuffer.h>
+#include <ui/GraphicBufferAllocator.h>
+#include <ui/GraphicBufferMapper.h>
 #include <ui/PixelFormat.h>
 
 namespace android {
@@ -334,4 +332,5 @@ status_t GraphicBuffer::unflatten(
 }
 
 // ---------------------------------------------------------------------------
+
 }; // namespace android

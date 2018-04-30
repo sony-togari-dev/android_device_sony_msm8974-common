@@ -42,18 +42,47 @@ LOCAL_32_BIT_ONLY := true
 LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
-# LibGraphicBuffer
+# libshim_cald
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-    camera/ui/GraphicBuffer.cpp \
-    camera/ui/GraphicBufferAllocator.cpp \
-    camera/ui/GraphicBufferMapper.cpp \
-    camera/utils/Looper.cpp \
-    camera/utils/VectorImpl.cpp
+    gui/SensorManager.cpp \
+    symbols/Parcel.cpp \
+    utils/VectorImpl.cpp
 
 LOCAL_C_INCLUDES := \
-    camera/include \
+    $(LOCAL_PATH)/include \
+    external/safe-iop/include \
+    system/core/libutils
+
+LOCAL_SHARED_LIBRARIES := \
+    libcutils \
+    libgui \
+    libbinder \
+    libsensor \
+    libutils \
+    liblog
+
+LOCAL_MODULE := libshim_cald
+
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
+
+# libshim_camera
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    ui/GraphicBuffer.cpp \
+    ui/GraphicBufferAllocator.cpp \
+    ui/GraphicBufferMapper.cpp \
+    utils/Looper.cpp \
+    utils/VectorImpl.cpp
+
+LOCAL_C_INCLUDES := \
+    $(LOCAL_PATH)/include \
     external/safe-iop/include \
     system/core/libutils
 
@@ -65,8 +94,10 @@ LOCAL_SHARED_LIBRARIES := \
     libsync \
     libutils
 
-LOCAL_MODULE := libGraphicBuffer
+LOCAL_MODULE := libshim_camera
+
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_PROPRIETARY_MODULE := true
+
 include $(BUILD_SHARED_LIBRARY)
