@@ -53,9 +53,3 @@ allow mediaserver hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
 
 # Binder policies
 binder_call(mediaserver, hal_configstore_default);
-
-allow mediaserver mpctl_data_file:sock_file write;
-allow mediaserver mpdecision:unix_stream_socket connectto;
-allow mediaserver sysfs_camera_torch:dir search;
-allow mediaserver sysfs_camera_torch:file { open read write };
-allow mediaserver sysfs_camera_torch:lnk_file read;
