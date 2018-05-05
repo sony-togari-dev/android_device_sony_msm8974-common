@@ -23,6 +23,7 @@ allow tad iddd_file:sock_file write;
 allow tad iddd_file:dir search;
 allow tad iddd_socket:dir search;
 allow tad iddd_socket:sock_file write;
+allow tad iddd:unix_stream_socket connectto;
 
 #tad random audit2allow
 allow tad proc:file { open read };
