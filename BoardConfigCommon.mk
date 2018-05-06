@@ -86,6 +86,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# exFAT
+TARGET_EXFAT_DRIVER := exfat
+
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 DEVICE_SPECIFIC_GPS_PATH := hardware/qcom/gps/sdm845
