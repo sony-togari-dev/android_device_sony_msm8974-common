@@ -86,6 +86,7 @@
 /system/vendor/bin/timekeep            u:object_r:timekeep_exec:s0
 /system/vendor/bin/updatemiscta        u:object_r:ta_qmi_exec:s0
 /system/vendor/bin/wvkbd               u:object_r:wv_exec:s0
+/system/vendor/bin/hw/android\.hardware\.drm@1\.0-service.widevine u:object_r:hal_drm_widevine_exec:s0
 
 /dev/block/platform/soc\.0/7824900\.sdhci/by-name/diag                            u:object_r:diag_partition_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/diag                           u:object_r:diag_partition_device:s0
