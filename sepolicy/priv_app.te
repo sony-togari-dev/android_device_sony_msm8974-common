@@ -1,6 +1,6 @@
 allow priv_app proc_interrupts:file r_file_perms;
 allow priv_app device:dir { read open };
-allow priv_app proc_stat:file { read };
+allow priv_app proc_stat:file { read open };
 
 # Do not audit priv-app access to prop service, it's forbidden anyways
 dontaudit priv_app property_socket:sock_file write;
