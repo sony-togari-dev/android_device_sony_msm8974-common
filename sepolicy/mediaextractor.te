@@ -1,0 +1,2 @@
+allow mediaextractor vfat:file r_file_perms;
+allow mediaextractor fuse:file r_file_perms;
