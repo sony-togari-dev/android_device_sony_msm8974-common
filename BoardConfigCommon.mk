@@ -128,6 +128,9 @@ BOARD_USES_INIT_SONY := true
 # Lights HAL
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Partition information
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
