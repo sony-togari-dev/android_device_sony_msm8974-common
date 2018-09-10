@@ -5,11 +5,6 @@
     "branch": "lineage-15.1"
   },
   {
-    "repository": "LineageOS/android_device_qcom_common",
-    "target_path": "device/qcom/common",
-    "branch": "lineage-15.1"
-  },
-  {
     "repository": "omnirom/android_hardware_sony_thermanager",
     "target_path": "hardware/sony/thermanager",
     "branch": "android-8.1"
