@@ -2,7 +2,7 @@
   {
     "repository": "LineageOS/android_device_sony_common",
     "target_path": "device/sony/common-caf",
-    "branch": "lineage-15.1"
+    "branch": "lineage-16.0"
   },
   {
     "repository": "omnirom/android_hardware_sony_thermanager",
@@ -15,13 +15,13 @@
     "branch": "android-8.1"
   },
   {
-    "repository": "omnirom/android_hardware_sony_timekeep",
+    "repository": "LineageOS/android_hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep",
-    "branch": "android-8.1"
+    "branch": "lineage-16.0"
   },
   {
     "repository": "AICP/proprietary_vendor_sony",
     "target_path": "vendor/sony",
-    "branch": "o8.1"
+    "branch": "p9.0"
   }
 ]
