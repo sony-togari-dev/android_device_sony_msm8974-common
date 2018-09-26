@@ -18,3 +18,4 @@ allow timekeep time_data_file:dir { create_dir_perms search };
 set_prop(timekeep, timekeep_prop)
 
 r_dir_file(timekeep, sysfs_timekeep)
+r_dir_file(timekeep, sysfs_rtc);

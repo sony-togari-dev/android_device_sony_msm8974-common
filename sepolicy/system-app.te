@@ -4,6 +4,7 @@ allow system_app time_data_file:file { write open getattr };
 # Timekeep
 set_prop(system_app, timekeep_prop)
 r_dir_file(system_app, sysfs_timekeep)
+r_dir_file(system_app, sysfs_rtc)
 
 allow system_app alarm_boot_prop:file read;
 allow system_app alarm_handled_prop:file read;
