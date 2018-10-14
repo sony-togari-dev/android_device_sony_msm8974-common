@@ -48,6 +48,8 @@ LOCAL_COPY_HEADERS:= \
     LocApiV02.h \
     loc_util_log.h
 
+LOCAL_LDLIBS := -llog
+
 
 ## Includes
 LOCAL_C_INCLUDES := \

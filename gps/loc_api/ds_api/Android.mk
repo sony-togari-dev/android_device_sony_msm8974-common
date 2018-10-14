@@ -33,6 +33,8 @@ LOCAL_COPY_HEADERS:= \
 
 LOCAL_LDFLAGS += -Wl,--export-dynamic
 
+LOCAL_LDLIBS := -llog
+
 ## Includes
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libloc_eng \
