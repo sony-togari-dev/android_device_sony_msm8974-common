@@ -10,11 +10,6 @@
     "branch": "android-8.1"
   },
   {
-    "repository":  "omnirom/android_hardware_sony_location",
-    "target_path": "hardware/sony/location",
-    "branch":    "android-8.1"
-  },
-  {
     "repository": "omnirom/android_hardware_sony_macaddrsetup",
     "target_path": "hardware/sony/macaddrsetup",
     "branch": "android-8.1"
