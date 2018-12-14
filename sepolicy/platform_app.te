@@ -1,3 +1,12 @@
 # Allow platform apps to enable ANC
 set_prop(platform_app, anc_prop)
 get_prop(platform_app, qemu_hw_mainkeys_prop)
+
+allow platform_app alarm_boot_prop:file read;
+allow platform_app alarm_handled_prop:file read;
+allow platform_app alarm_instance_prop:file read;
+allow platform_app bg_boot_complete_prop:file read;
+allow platform_app bg_daemon_prop:file read;
+allow platform_app ctl_netmgrd_prop:file read;
+allow platform_app net_dns_prop:file read;
+allow platform_app nfc_service:service_manager find;

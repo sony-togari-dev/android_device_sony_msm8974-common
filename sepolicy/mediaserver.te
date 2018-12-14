@@ -24,7 +24,7 @@ allow mediaserver credmgrd_socket:sock_file write;
 allow mediaextractor sdcardfs:file getattr;
 allow mediaserver sensorservice_service:service_manager find;
 
-allow mediaserver sysfs:file write;
+allow mediaserver sysfs:file { open read write };
 allow mediaserver sysfs_battery_supply:dir search;
 allow mediaserver sysfs_battery_supply:file { getattr open read };
 

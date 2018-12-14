@@ -15,3 +15,5 @@ add_service(hal_graphics_composer_default, qdisplay_service)
 
 # Access /sys/devices/virtual/graphics/fb0/mdp/caps and maybe others
 r_dir_file(hal_graphics_composer_default, sysfs_type)
+
+allow hal_graphics_composer_default default_android_vndservice:service_manager { add find };

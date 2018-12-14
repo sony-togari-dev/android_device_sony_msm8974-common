@@ -1,7 +1,21 @@
 allow priv_app proc_interrupts:file r_file_perms;
 allow priv_app device:dir { read open };
 allow priv_app proc_stat:file { read open };
+allow priv_app sysfs:file { open read getattr };
 
 # Do not audit priv-app access to prop service, it's forbidden anyways
 dontaudit priv_app property_socket:sock_file write;
 dontaudit priv_app init:unix_stream_socket connectto;
+
+allow priv_app alarm_boot_prop:file read;
+allow priv_app alarm_handled_prop:file read;
+allow priv_app alarm_instance_prop:file read;
+allow priv_app anc_prop:file read;
+allow priv_app bg_boot_complete_prop:file read;
+allow priv_app bg_daemon_prop:file read;
+allow priv_app msm_irqbalance_prop:file read;
+allow priv_app net_dns_prop:file read;
+allow priv_app netd_prop:file read;
+allow priv_app netd_stable_secret_prop:file read;
+allow priv_app nfc_nq_prop:file read;
+allow priv_app sysfs:file { open read };

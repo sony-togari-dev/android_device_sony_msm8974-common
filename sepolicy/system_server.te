@@ -26,3 +26,5 @@ allow system_server mpdecision:unix_stream_socket connectto;
 
 # adb properties
 set_prop(system_server, shell_prop);
+
+allow system_server init:binder { call transfer };

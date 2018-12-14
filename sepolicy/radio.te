@@ -1,0 +1,4 @@
+allow radio alarm_boot_prop:file read;
+allow radio alarm_handled_prop:file read;
+allow radio alarm_instance_prop:file read;
+allow radio anc_prop:file read;

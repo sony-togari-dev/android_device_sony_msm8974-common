@@ -2,3 +2,7 @@
 allow hwservicemanager proc:file { open read };
 allow hwservicemanager sysfs:file { getattr open read };
 
+allow hwservicemanager init:binder call;
+allow hwservicemanager init:dir search;
+allow hwservicemanager init:file { open read };
+allow hwservicemanager init:process getattr;

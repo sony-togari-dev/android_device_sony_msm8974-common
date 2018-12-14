@@ -1,1 +1,3 @@
 allow ueventd sysfs_camera_torch:file { open write };
+
+allow ueventd proc:file { open read getattr };

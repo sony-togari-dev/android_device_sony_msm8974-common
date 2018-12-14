@@ -1,2 +1,5 @@
 allow vold iddd_file:dir r_dir_perms;
 allow vold iddd_file:file r_file_perms;
+
+allow vold sdcardd:process noatsecure;
+allow vold sgdisk:process noatsecure;
