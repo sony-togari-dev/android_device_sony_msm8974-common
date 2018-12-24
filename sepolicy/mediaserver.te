@@ -34,6 +34,11 @@ allow mediaserver system_server:unix_stream_socket connectto;
 allow mediaserver mpdecision:unix_stream_socket connectto;
 
 
+allow mediaserver cameraproxy_service:service_manager find;
+allow mediaserver cameraserver_service:service_manager add;
+allow mediaserver device:dir { open read };
+
+
 rw_dir_file(mediaserver, camera_data_file)
 allow mediaserver camera_data_file:dir search;
 

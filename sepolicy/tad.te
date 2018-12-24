@@ -28,3 +28,5 @@ allow tad iddd:unix_stream_socket connectto;
 #tad random audit2allow
 allow tad proc:file { open read };
 allow tad rootfs:file { entrypoint read };
+allow tad proc_cmdline:file { open read };
+

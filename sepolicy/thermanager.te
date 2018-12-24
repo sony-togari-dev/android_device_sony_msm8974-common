@@ -14,4 +14,6 @@ allow thermanager sysfs_usb_supply:file rw_file_perms;
 allow thermanager sysfs:file { open read };
 allow thermanager sysfs_battery_supply:dir search;
 allow thermanager sysfs_battery_supply:file { open read write };
+allow thermanager sysfs_kgsl:file { open read write };
+
 

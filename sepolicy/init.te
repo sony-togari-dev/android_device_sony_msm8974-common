@@ -40,3 +40,15 @@ allow init sysfs_thermal:file write;
 allow init sysfs_devices_system_cpu:file write;
 allow init sysfs_graphics:file { open write };
 allow init sysfs_usb_supply:file { open write };
+
+#============= init ==============
+allow init hal_lineage_power_hwservice:hwservice_manager add;
+allow init hal_power_hwservice:hwservice_manager add;
+allow init mpctl_socket:sock_file write;
+allow init mpdecision:unix_stream_socket connectto;
+allow init proc:file setattr;
+allow init shell_exec:file execute_no_trans;
+allow init sysfs_lowmemorykiller:file open;
+allow init sysfs_timekeep:file { open read };
+allow init sysfs_usb_supply:file setattr;
+
