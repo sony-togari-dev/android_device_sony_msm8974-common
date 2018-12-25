@@ -105,7 +105,6 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libc2dcolorconvert \
     libdivxdrmdecrypt \
-    libmm-omxcore \
     libstagefrighthw
 
 # Overlay
