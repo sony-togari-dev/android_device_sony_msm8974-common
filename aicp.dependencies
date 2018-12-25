@@ -7,7 +7,7 @@
   {
     "repository": "omnirom/android_hardware_sony_thermanager",
     "target_path": "hardware/sony/thermanager",
-    "branch": "android-9.0"
+    "branch": "android-8.1"
   },
   {
     "repository": "omnirom/android_hardware_sony_macaddrsetup",
