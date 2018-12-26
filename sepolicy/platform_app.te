@@ -1,6 +1,5 @@
 # Allow platform apps to enable ANC
 set_prop(platform_app, anc_prop)
-get_prop(platform_app, qemu_hw_mainkeys_prop)
 
 allow platform_app alarm_boot_prop:file read;
 allow platform_app alarm_handled_prop:file read;
