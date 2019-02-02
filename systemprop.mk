@@ -97,3 +97,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0
+
+# OTA - create openrecoveryscript manually
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.aicp.create.ors.file=true
