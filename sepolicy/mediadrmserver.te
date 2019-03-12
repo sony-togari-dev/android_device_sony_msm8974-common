@@ -1,3 +1,5 @@
 allow mediadrmserver rootfs:lnk_file getattr;
 allow mediadrmserver tad_socket:sock_file write;
 allow mediadrmserver tad:unix_stream_socket connectto;
+allow mediadrmserver media_data_file:dir { getattr open read search };
+allow mediadrmserver media_data_file:file { getattr open read write };
