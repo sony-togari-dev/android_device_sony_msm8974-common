@@ -1,8 +1,8 @@
 [
   {
-    "repository": "LineageOS/android_device_sony_common",
+    "repository": "AICP/device_sony_common",
     "target_path": "device/sony/common-caf",
-    "branch": "lineage-16.0"
+    "branch": "p9.0-caf"
   },
   {
     "repository": "omnirom/android_hardware_sony_thermanager",
