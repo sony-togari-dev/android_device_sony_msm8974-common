@@ -131,3 +131,6 @@
 
 # rmt_storage
 /sys/devices/fd80000\.rmtfs_sharedmem/uio(/.*)?                                   u:object_r:sysfs_uio:s0
+
+# HALs
+/system/vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software        u:object_r:hal_gatekeeper_default_exec:s0
