@@ -90,6 +90,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.perf.cores_online=2 \
     ro.vendor.extension_library=libqti-perfd-client.so
 
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.omx_default_rank.sw-audio=1 \
+    debug.stagefright.omx_default_rank=0
+
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0
