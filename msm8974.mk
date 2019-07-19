@@ -129,9 +129,9 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     libshim_cald
 
-# Snap Camera (moved to platform)
-#PRODUCT_PACKAGES += \
-#    SnapdragonCamera
+# Snap Camera
+PRODUCT_PACKAGES += \
+    Snap
 
 # Recovery
 PRODUCT_PACKAGES += \
