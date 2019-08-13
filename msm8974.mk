@@ -123,11 +123,8 @@ endif
 # Camera (stock blobs)
 PRODUCT_PACKAGES += \
 	camera.qcom \
-    libshims_signal \
     libshims_idd \
-    libsonycamera \
-    libshim_camera \
-    libshim_cald
+    libshims_signal \
 
 # Snap Camera
 PRODUCT_PACKAGES += \
