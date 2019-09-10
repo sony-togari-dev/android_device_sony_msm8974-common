@@ -32,6 +32,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false \
     ro.hdmi.enable=true
 
+# Google WiFi-Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.wfd.enable=1 \
+    tunnel.audio.encode = false
+
 # Snapdragon audio processing
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.speaker.prot.enable=false \
