@@ -133,9 +133,6 @@ TARGET_HAS_LEGACY_POWER_STATS := true
 TARGET_HAS_NO_WLAN_STATS := true
 TARGET_USES_INTERACTION_BOOST := true
 
-# RIL
-TARGET_RIL_VARIANT := caf
-
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 
