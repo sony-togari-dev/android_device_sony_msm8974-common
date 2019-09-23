@@ -68,15 +68,6 @@ TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/bin/mediaserver=22
 
-# Camera Shims
-TARGET_LD_SHIM_LIBS := \
-    /system/vendor/bin/credmgrd|/system/vendor/lib/libshims_signal.so \
-    /system/vendor/bin/iddd|/system/vendor/lib/libshims_idd.so \
-    /system/vendor/bin/mm-qcamera-daemon|libandroid.so \
-    /system/vendor/bin/suntrold|/system/vendor/lib/libshims_signal.so \
-    /system/lib/hw/camera.vendor.qcom.so|libsensor.so \
-    /system/lib/libcammw.so|libsensor.so
-
 # Charger
 HEALTHD_ENABLE_TRICOLOR_LED := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
