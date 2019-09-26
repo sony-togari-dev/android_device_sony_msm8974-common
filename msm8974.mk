@@ -146,7 +146,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal management
 PRODUCT_PACKAGES += \
-    thermanager
+    thermanager \
+    thermal.default
 
 # TimeKeep for managing time offsets w.r.t. RTC
 PRODUCT_PACKAGES += \
