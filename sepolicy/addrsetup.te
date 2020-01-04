@@ -6,6 +6,7 @@ init_daemon_domain(addrsetup)
 
 # Connect to /dev/socket/tad
 unix_socket_connect(addrsetup, tad, tad)
+allow addrsetup init:unix_stream_socket connectto;
 
 allow addrsetup bluetooth_data_file:dir rw_dir_perms;
 allow addrsetup bluetooth_data_file:file create_file_perms;
@@ -20,4 +21,3 @@ allow addrsetup tad_socket:sock_file { write };
 # probably bad labeled dest file
 auditallow addrsetup proc:file { open read };
 auditallow addrsetup sysfs:file { getattr open read write };
-

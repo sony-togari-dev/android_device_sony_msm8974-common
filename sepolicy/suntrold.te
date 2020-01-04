@@ -12,6 +12,7 @@ allow suntrold socket_device:sock_file { create getattr setattr };
 allow suntrold suntrold_sock_socket:dir { add_name search write };
 allow suntrold suntrold_sock_socket:sock_file { create setattr };
 allow suntrold tad:unix_stream_socket connectto;
+allow suntrold init:unix_stream_socket connectto;
 allow suntrold tad_socket:sock_file write;
 
 # firmware file access
