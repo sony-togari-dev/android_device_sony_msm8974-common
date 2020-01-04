@@ -56,5 +56,7 @@ allow mediaserver proc:file { open read };
 allow mediaserver hal_camera_hwservice:hwservice_manager find;
 allow mediaserver hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
 
+allow mediaserver sensor_privacy_service:service_manager find;
+
 # Binder policies
 binder_call(mediaserver, hal_configstore_default);
