@@ -2,26 +2,36 @@
   {
     "repository": "AICP/device_sony_common",
     "target_path": "device/sony/common-caf",
-    "branch": "p9.0-caf"
+    "branch": "q10.0-caf"
   },
   {
-    "repository": "omnirom/android_hardware_sony_thermanager",
+    "repository": "AICP/kernel_sony_msm8974",
+    "target_path": "kernel/sony/msm8974",
+    "branch": "q10.0"
+  },
+  {
+    "repository": "AICP/hardware_sony_thermanager",
     "target_path": "hardware/sony/thermanager",
-    "branch": "android-8.1"
+    "branch": "q10.0"
   },
   {
-    "repository": "omnirom/android_hardware_sony_macaddrsetup",
+    "repository": "AICP/hardware_sony_macaddrsetup",
     "target_path": "hardware/sony/macaddrsetup",
-    "branch": "android-9.0"
+    "branch": "q10.0"
   },
   {
-    "repository": "LineageOS/android_hardware_sony_timekeep",
+    "repository": "AICP/hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep",
-    "branch": "lineage-16.0"
+    "branch": "q10.0"
+  },
+  {
+    "repository": "LineageOS/android_hardware_qcom_gps",
+    "target_path": "hardware/qcom-caf/msm8974/gps",
+    "branch": "lineage-17.1"
   },
   {
     "repository": "AICP/proprietary_vendor_sony",
     "target_path": "vendor/sony",
-    "branch": "p9.0"
+    "branch": "q10.0"
   }
 ]
