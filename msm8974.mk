@@ -74,12 +74,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 PRODUCT_PACKAGES += \
-    gps.msm8974 \
-    libloc_core \
-    libloc_eng \
-    libgps.utils \
-    libloc_ds_api \
-    libloc_api_v02
+    gps.msm8974
 
 # Ion
 PRODUCT_PACKAGES += \
@@ -167,3 +162,6 @@ PRODUCT_PACKAGES += \
     wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Include non-opensource parts
+$(call inherit-product, vendor/sony/msm8974-common/msm8974-common-vendor.mk)
