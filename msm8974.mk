@@ -29,6 +29,11 @@ $(call inherit-product, device/sony/msm8974-common/hidl.mk)
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/vendor/etc/permissions/permissions_sony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/permissions_sony.xml
 
+# Additional native libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -123,6 +128,11 @@ endif
 
 # Power
 # now qti binderised
+
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-vendorcompat \
+    libprotobuf-cpp-lite-vendorcompat
 
 # Camera (stock blobs)
 PRODUCT_PACKAGES += \
