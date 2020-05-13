@@ -15,6 +15,7 @@
 BOARD_VENDOR := sony
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Use Snapdragon LLVM Compiler if available
 TARGET_USE_SDCLANG := true
