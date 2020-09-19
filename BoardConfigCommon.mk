@@ -141,6 +141,10 @@ include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/sony/msm8974-common/sepolicy
 
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/lib/libril-qc-qmi-1.so|libaudioclient_shim.so
+
 # Treble
 DEVICE_MANIFEST_FILE := device/sony/msm8974-common/treble-manifest.xml
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
