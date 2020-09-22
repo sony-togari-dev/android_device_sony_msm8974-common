@@ -143,3 +143,4 @@ BOARD_SEPOLICY_DIRS += \
 
 # Treble
 DEVICE_MANIFEST_FILE := device/sony/msm8974-common/treble-manifest.xml
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
