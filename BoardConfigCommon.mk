@@ -151,4 +151,7 @@ TARGET_LD_SHIM_LIBS += \
 
 # Treble
 DEVICE_MANIFEST_FILE := device/sony/msm8974-common/treble-manifest.xml
+ifneq ($(BOARD_HAVE_RADIO),false)
+    DEVICE_MANIFEST_FILE += device/sony/msm8974-common/treble-manifest-radio.xml
+endif
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
