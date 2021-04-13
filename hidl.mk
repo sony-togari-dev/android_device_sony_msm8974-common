@@ -2,7 +2,7 @@
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio@6.0-impl \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
     audio.bluetooth.default \
     android.hardware.audio.effect@6.0-impl
 
