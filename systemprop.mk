@@ -1,3 +1,7 @@
+# BPF
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.ebpf.supported=false
+
 # Data modules config
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.data.large_tcp_window_size=true
