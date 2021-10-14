@@ -18,6 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     debug.mdpcomp.logs=0 \
+    debug.renderengine.backend=threaded \
     dev.pm.dyn_samplingrate=1 \
     debug.hwui.use_buffer_age=false
 
