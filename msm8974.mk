@@ -154,6 +154,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keycheck
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    toybox_init
+
 # RIL
 PRODUCT_PACKAGES += \
     libaudioclient_shim
