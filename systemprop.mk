@@ -13,6 +13,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth HandsFree profile
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1
+    bluetooth.device.class_of_device=90,2,12 \
     bluetooth.profile.asha.central.enabled=true \
     bluetooth.profile.a2dp.source.enabled=true \
     bluetooth.profile.avrcp.target.enabled=true \
