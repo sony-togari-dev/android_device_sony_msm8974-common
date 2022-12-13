@@ -23,12 +23,7 @@ PRODUCT_PACKAGES += \
 	android.hardware.graphics.allocator@2.0-impl \
 	android.hardware.graphics.allocator@2.0-service \
 	android.hardware.graphics.mapper@2.0-impl \
-	android.hardware.graphics.composer@2.1-impl \
 	android.hardware.graphics.composer@2.1-service
-
-# Dumpstate
-PRODUCT_PACKAGES += \
-	android.hardware.dumpstate@1.0-service.sony
 
 # FM
 PRODUCT_PACKAGES += \
@@ -82,11 +77,6 @@ PRODUCT_PACKAGES += \
 # Rendering
 PRODUCT_PACKAGES += \
 	android.hardware.renderscript@1.0-impl
-
-#RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0-impl \
-    android.hardware.radio.deprecated@1.0-impl
 
 # Sensors
 PRODUCT_PACKAGES += \

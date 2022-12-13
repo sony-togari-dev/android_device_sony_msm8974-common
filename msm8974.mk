@@ -38,8 +38,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.primary.msm8974 \
     audio.r_submix.default \
-    audio.usb.default \
-    audio_policy.msm8974
+    audio.usb.default
 
 PRODUCT_PACKAGES += \
     libaudio-resampler \
@@ -60,14 +59,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     hwcomposer.msm8974 \
     gralloc.msm8974 \
-    copybit.msm8974 \
     memtrack.msm8974 \
-    libgenlock \
     libmemalloc \
     liboverlay \
-    libqdutils \
-    libtilerenderer \
-    libI420colorconvert
+    libqdutils
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -85,10 +80,6 @@ PRODUCT_PACKAGES += \
 # Ion
 PRODUCT_PACKAGES += \
     libion
-
-# JamesDSPManager
-PRODUCT_PACKAGES += \
-    JamesDSPManager
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -117,9 +108,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libOmxVdecHevc \
     libc2dcolorconvert \
-    libdivxdrmdecrypt \
     libstagefrighthw
 
 # Overlay
@@ -148,9 +137,8 @@ PRODUCT_PACKAGES += \
     libshims_idd \
     libshims_signal \
 
-# Snap Camera
 PRODUCT_PACKAGES += \
-    Snap
+    Aperture
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -176,7 +164,6 @@ PRODUCT_PACKAGES += \
 
 # Thermal management
 PRODUCT_PACKAGES += \
-    thermanager \
     thermal.default
 
 # TimeKeep for managing time offsets w.r.t. RTC
@@ -193,7 +180,6 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     wificond \
-    wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
 
