@@ -12,6 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth HandsFree profile
 PRODUCT_PROPERTY_OVERRIDES += \
+    bluetooth.core.le.vendor_capabilities.enabled=false \
     bluetooth.hfp.client=1
 
 # Display rendering
