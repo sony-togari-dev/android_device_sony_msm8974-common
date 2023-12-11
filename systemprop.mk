@@ -16,6 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display rendering
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.egl=adreno \
     persist.hwc.mdpcomp.enable=true \
     debug.mdpcomp.logs=0 \
     debug.renderengine.backend=gles \
