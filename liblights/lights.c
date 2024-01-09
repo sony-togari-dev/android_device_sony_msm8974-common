@@ -18,7 +18,7 @@
 
 #define LOG_TAG "lights.msm8974"
 
-#include <cutils/log.h>
+#include <log/log.h>
 #include <stdint.h>
 #include <limits.h>
 #include <string.h>
