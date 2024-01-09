@@ -145,9 +145,10 @@ TARGET_USES_INTERACTION_BOOST := true
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
+SELINUX_IGNORE_NEVERALLOWS := true
 
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/sony/msm8974-common/sepolicy
+#    device/sony/msm8974-common/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
